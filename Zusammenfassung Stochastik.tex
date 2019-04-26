@@ -1,0 +1,107 @@
+% !TEX encoding = UTF-8 Unicode
+
+
+\documentclass[a4paper,oneside, 12pt, english]{scrbook} % Layout-Einstellungen für das Dokument
+\usepackage[utf8]{inputenc} % UTF-8 Codierung
+% \usepackage[ansinew]{inputenc} % bei Problemen mit Umlauten
+\usepackage[english, ngerman]{babel} 
+ \usepackage[dvipsnames]{xcolor} 
+\usepackage[font={small}, labelfont=bf]{caption} % kleine Bildunterschriften
+\usepackage{geometry} % Für Feinanpassungen des Layouts
+\usepackage{pdfpages}
+\usepackage{amsmath,amssymb,amsthm,amsfonts,amsbsy,latexsym}
+\usepackage{enumerate,url}
+\usepackage{ulem}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{booktabs}
+\usepackage{hyperref}
+\usepackage{ dsfont }
+\hypersetup{colorlinks,
+	citecolor=black,
+	filecolor=black,
+	linkcolor=black,
+	urlcolor=black}
+
+
+\usepackage{pgf}
+\usetikzlibrary{arrows,automata}
+
+% Einstellungen fÃŒr Abstand an den ändern
+\geometry{a4paper,left=35mm,right=35mm,top=20mm,bottom=20mm, includeheadfoot}
+
+\raggedbottom
+
+\usepackage{pgffor, ifthen}
+\newcommand{\notes}[3][\empty]{%
+    \noindent \foreach \n in {1,...,#2}{%
+        \ifthenelse{\equal{#1}{\empty}}
+            {\rule{#3}{0.5pt}}
+            {\rule{#3}{0.5pt}\vspace{#1}}
+        }
+}
+
+
+\begin{document}
+%\theoremstyle{definition}
+
+\pagenumbering{arabic}
+
+\begin{titlepage}
+	\begin{centering}
+		\vspace*{\fill}
+		
+		
+		\vspace{2cm} 
+		
+		{\bfseries \LARGE
+			Stochastik\\[2cm]
+		}
+		{\bfseries \Large
+		Mitschrift \\[0.5cm]
+		}
+%		{\bfseries \Large
+%			von: Alexander Welsing\\[0.1cm]
+%			\notes{1}{20em}\\[1.5cm]
+%		}
+		{\Large
+			Vorlesung bei: Prof. Dr. Kabluchko   \\[1.5cm]
+		}
+		{\Large
+			Datum: \today\\
+			Sommersemester 2019\\[1.5cm]
+			
+		}
+		{\Large
+			Westfälische Wilhelms-Universität Münster
+		}
+		
+		
+		\vfill
+	\end{centering}
+\end{titlepage}
+
+\tableofcontents
+
+\input{tex/04_02.tex}
+\input{tex/04_05.tex}
+\input{tex/04_09.tex}
+\input{tex/04_12.tex}
+\input{tex/04_16.tex}
+\input{tex/04_23.tex}
+\input{tex/04_26.tex}
+
+
+%\section{UML-Test}
+%
+%\begin{tikzpicture}
+%\umlclass{Testklasse}{!
+%+attribut}{
+%-methodeA(i : int) : void}
+%
+%\end{tikzpicture}
+
+%\section{test}
+%\includegraphics[page=5, width=0.9\textwidth]{Skript/01_Marketing_Einfuerung.pdf}
+%\includepdf[nup=1x2,pages={3,4}]{Skript/01_Marketing_Einfuerung.pdf}
+\end{document}
