@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/W32TeX) (preloaded format=pdflatex 2019.2.17)  3 MAY 2019 19:34
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/W32TeX) (preloaded format=pdflatex 2019.2.17)  3 MAY 2019 19:38
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**"Zusammenfassung Stochastik.tex"
-(./Zusammenfassung Stochastik.tex
+**"Mitschrift Stochastik.tex"
+(./Mitschrift Stochastik.tex
 LaTeX2e <2018-12-01>
 (d:/texlive/2018/texmf-dist/tex/latex/koma-script/scrbook.cls
 Document Class: scrbook 2019/02/01 v3.26b KOMA-Script document class (book)
@@ -862,8 +862,8 @@ File: pgflibraryshapes.multipart.code.tex 2019/02/02 v3.1.1 (3.1.1)
 \pgfnodepartsevenbox=\box67
 \pgfnodepartsixbox=\box68
 \pgfnodepartfivebox=\box69
-))) (./Zusammenfassung Stochastik.aux)
-\openout1 = `"Zusammenfassung Stochastik.aux"'.
+))) (./Mitschrift Stochastik.aux)
+\openout1 = `"Mitschrift Stochastik.aux"'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 46.
 LaTeX Font Info:    ... okay on input line 46.
@@ -973,9 +973,9 @@ LaTeX Info: Redefining \ref on input line 46.
 LaTeX Info: Redefining \pageref on input line 46.
 LaTeX Info: Redefining \nameref on input line 46.
 
-(./Zusammenfassung Stochastik.out) (./Zusammenfassung Stochastik.out)
+(./Mitschrift Stochastik.out) (./Mitschrift Stochastik.out)
 \@outlinefile=\write4
-\openout4 = `"Zusammenfassung Stochastik.out"'.
+\openout4 = `"Mitschrift Stochastik.out"'.
 
 Class scrbook Info: loading recommended package `bookmark'.
 (scrbook)           Using `bookmark' together with `hyperref' is recommended,
@@ -998,10 +998,9 @@ e 164.
 
 
 
-{d:/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-(./Zusammenfassung Stochastik.toc
+{d:/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (./Mitschrift S
+tochastik.toc
 LaTeX Font Info:    Try loading font information for U+msa on input line 4.
-
 (d:/texlive/2018/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
@@ -1021,7 +1020,7 @@ LaTeX Font Info:    Try loading font information for U+dsrom on input line 23.
 File: Udsrom.fd 1995/08/01 v0.1 Double stroke roman font definitions
 ))
 \tf@toc=\write5
-\openout5 = `"Zusammenfassung Stochastik.toc"'.
+\openout5 = `"Mitschrift Stochastik.toc"'.
 
  (./tex/04_02.tex [2
 
@@ -1295,23 +1294,22 @@ OT1/cmr/m/n/12 = [][] [] []$
 [32 <./img/diaa.PNG> <./img/dia.PNG>] [33]) [34]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 110.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 110.
-
-(./Zusammenfassung Stochastik.aux)
+ (./Mitschrift Stochastik.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 110.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 110.
-Package rerunfilecheck Info: File `"Zusammenfassung Stochastik".out' has not ch
-anged.
+Package rerunfilecheck Info: File `"Mitschrift Stochastik".out' has not changed
+.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 110.
  ) 
 Here is how much of TeX's memory you used:
  23092 strings out of 492616
- 440210 string characters out of 6132768
- 658193 words of memory out of 5000000
+ 440130 string characters out of 6132768
+ 658188 words of memory out of 5000000
  26429 multiletter control sequences out of 15000+600000
  16698 words of font info for 70 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 64i,14n,66p,9152b,449s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 64i,14n,66p,9147b,449s stack positions out of 5000i,500n,10000p,200000b,80000s
 <d:/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><d:/tex
 live/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><d:/texlive/2018
 /texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb><d:/texlive/2018/texmf-dis
@@ -1330,7 +1328,7 @@ y6.pfb><d:/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><d:
 /texlive/2018/texmf-dist/fonts/type1/public/doublestroke/dsrom12.pfb><d:/texliv
 e/2018/texmf-dist/fonts/type1/public/doublestroke/dsrom8.pfb><d:/texlive/2018/t
 exmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on "Zusammenfassung Stochastik.pdf" (34 pages, 1529972 bytes).
+Output written on "Mitschrift Stochastik.pdf" (34 pages, 1529972 bytes).
 PDF statistics:
  460 PDF objects out of 1000 (max. 8388607)
  366 compressed objects within 4 object streams
