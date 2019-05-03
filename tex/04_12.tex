@@ -20,9 +20,8 @@ $n_1$ Fische haben Farbe 1, \hspace{1cm} $n_1 + n_2 +...+n_3 = n$\\
 $n_r$ Fische haben Farbe r\medskip\\
 Fischer fängt K Fische\\
  A = ''genau $k_1$ Fische mit Farbe 1 gefangen, genau $k_2 Fische $ ..., genau $k_r$ Fische ....''\\
- $k_1 + ... + k_r = k$\\
- (GRAFIK FISCHE AUFTEILUNG)\medskip\\
- $\mathds{P}[A] = ?$\medskip\\
+ $k_1 + ... + k_r = k$\smallskip\\
+ $\mathds{P}[A] = ?$\newpage
  \textbf{Lösung:} $\Omega = \{ T \subset \{1,...,n\}:\#T=k\} \qquad \#\Omega = \binom{n}{k}$\\
  $\#A = \binom{n_1}{k_1} * \binom{n_2}{k_2}*...*\binom{n_r}{k_r}$\medskip\\
  $k_1$ Fische mit Farbe 1 auswählen: $\binom{n_1}{k_1}$\\
@@ -44,7 +43,7 @@ Fischer fängt K Fische\\
  	\textbf{Beispiel}: k verschiedene Gegenstände sollen auf r Fächer verteilt werden, s.d.:\\
  	Im 1. Fach $k_1$ Gegenstände landen, \hspace{1cm} $k_1 +k_2+ ... + k_r = k$\\
  	Im 2. Fach $k_2$ Gegenstände landen,\\...\\
- 	Im r. Fach $k_r$ Gegenstände landen\smallskip\\\# Möglichkeiten = ?\medskip\\
+ 	Im r. Fach $k_r$ Gegenstände landen\smallskip\\\# Möglichkeiten = ?\newpage
  	\textbf{Lösung:}\\
  	 Wähle $k_1$ Gegenstände für Fach 1: $\binom{k}{k_1}$\smallskip\\
  	Wähle $k_2$ Gegenstände für Fach 2: $\binom{k-k_1}{k_2}$\smallskip\\
@@ -101,7 +100,7 @@ $$\#A = \binom{k}{k_1,...,k_r}*n_1^{k_r}*...*n_r^{k_r}$$
 $\#B=\underbrace{n_1*...*n_1}_{k_1}*\underbrace{n_2*...*n_2}_{k_2}*...*\underbrace{n_r*...*n_r}_{k_r} = n_1^{k_1}*...*n_r^{k_r}$\medskip\\
 $\mathds{P}[A] = \dfrac{\#A}{\#\Omega}= \binom{k}{k_1,...,k_r}*\left(\dfrac{n_1}{n}\right)^{k_1}*\left(\dfrac{n_2}{n}\right)^{k_2}*...*\left(\dfrac{n_r}{n}\right)^{k_r}$\qed\medskip\\
 \textbf{Beispiel:} Eine faire Münze wird n mal geworfen.\\ $\mathds{P}[\text{k Mal ''Kopf''}]= \dfrac{\binom{n}{k}}{2^n}$, dann: 
-$$\#\Omega = \{Z, K\}^n\quad \#\Omega = 2^n\quad \#A=\binom{n}{k} \quad \substack{\text{[Auswahl von k Würfen,}\\\text{ in denen Kopf geworfen wurde]}}$$
+$$\#\Omega = \{Z, K\}^n\quad \#\Omega = 2^n\quad \#A=\binom{n}{k} \quad \substack{\text{[Auswahl von k Würfen,}\\\text{ in denen Kopf geworfen wurde]}}$$\newpage
 \textbf{Zwei Aufgaben}:
 \begin{enumerate}
 	\item Rundreise. Kunde darf 5 aus 12 verschiedenen Städten auswählen.\\Anzahl der Touren: 12*11*10*9*8, nicht $\binom{12}{5}$ [Tour geordnet]

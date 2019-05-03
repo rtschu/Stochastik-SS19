@@ -1,4 +1,3 @@
-
 \section{Unabhängige Ereignisse}
 %\textbf{Definition}: ER. A und B heißen unabhängig, wenn $$\mathds{P}[A\cap B] = \mathds{P}[A] - \mathds{P}[B]$$
 %A, B unabhängig $\Rightarrow$\\
@@ -47,22 +46,22 @@ Seien A,B unabhängige Ereignisse. Dann sind
 \end{tabbing}
 Weitere \textbf{Beh.}: Seien A,B,C unabh. Dann sind:
 \begin{itemize}
-	\item A,B $cup$ C unabh 
+	\item A,B $\cup$ C unabh 
 	\item A, B $\cap$ C unabh
 	\item A, B $\Delta$ C unabh
 \end{itemize}
 \textbf{Bsp.}: Zuverlässigkeit: System besteht aus \textbf{n} Komp. 1,...,n\\
 Wkeit, dass Komp \textbf{i} ausfällt ist $\mathds{P}[A_i]=p_i$
 \begin{enumerate}
-	\item [a)] Parallelschaltung [GRAFIK PARALLELSCHALTUNG]\\
+	\item [a)] Parallelschaltung \includegraphics[width=0.3\textwidth]{img/parallel.PNG} \\
 	$\mathds{P}[\text{Ausfall des Systems}] = \mathds{P}[A_1\cap A_2] = p_1p_2$
-	\item [b)] Reihenschaltung [GRAFIK REIHENSCHALTUNG]\\
+	\item [b)] Reihenschaltung \includegraphics[width=0.3\textwidth]{img/reihe.PNG}\\
 	$\mathds{P}[\text{Ausfall des Systems}]= \mathds{P}[\underbrace{A_1 \cup A_2}_{\substack{\text{nicht disj,}\\\text{unabh}}}] = 1-\mathds{P}[(A_1 \cup A_1)^C]\overset{\text{de Morgan}}{=}$\smallskip\\
 	$1-\mathds{P}[\underbrace{A_1^C \bigcap A_2^C}_\text{unabh}]$\smallskip\\
 	$=1.\mathds{P}[A_1^C]*\mathds{P}[A_2^C]$\smallskip\\
 	$=1-(1-p_1)(1-p_2)=p_1+p_2 - p_1p_2$\medskip\\
-	(GRAFIK GROSSE SCHLATUNG)\\
-	$\mathds{P}[\text{Ausfall}] = $
+
+	$\mathds{P}[\text{Ausfall}] = ? $
 \end{enumerate}
 Ereignis, dass das System ausfällt:\\
 A = Ausfall des Systems = $A_1 \cup (A_5\cap (A_4 \cup (A_2 \cap A_3)))$\smallskip\\
@@ -85,16 +84,16 @@ $$\text{Aber:} \quad A \Delta \mathbf{C} \text{ und } B \cup \mathbf{C} \text{ s
 \textbf{Bem}: $\Omega$ und A sind immer unabh. \hspace{1cm} $\mathds{P}[\Omega \cap A] = \mathds{P}[A]=\mathds{P}[\overbrace{\Omega}^1]*\mathds{P}[A]$\\
 $\emptyset$ und A sind immer unabh \hspace{1cm} $\mathds{P}[\emptyset \cap A] = \mathds{P}[\emptyset]=0=\mathds{P}[\emptyset]*\mathds{P}[A]$
 \chapter{Satz von Bayes}
-\textbf{Satz}: Formel der totalen Wkeit\\
+\subsubsection{Satz: Formel der totalen Wkeit}
 Sei $\Omega = B_1  \dot{\cup} ... \dot{\cup} B_n $ disj. Zerlegung von $\Omega$, d.h. $B_i \cap B_j = \emptyset \: \forall i \neq j$ und $\Omega = B_1 \cup ...\cup B_n$\\
 Sei $\mathds{P}[B_i] \neq 0 \forall i$\medskip\\
 Sei A $\subset$ $\Omega$ ein weiteres Er. Dann gilt: 
-$$\mathds{P}[A] = \mathds{P}[B_1]*\mathds{P}[A \vert B_1] + \mathds{P}[B_2]*\mathds{P}[A\vert B_2]+-....$$
+$$\mathds{P}[A] = \mathds{P}[B_1]*\mathds{P}[A \vert B_1] + \mathds{P}[B_2]*\mathds{P}[A\vert B_2]+...$$
 \textbf{Beweis}: $\mathds{P}[A] = \mathds{P}[A\cap B_1]+\mathds{P}[A \cap B_2] +.....= \mathds{P}[B_1]*\mathds{P}[A \vert B_1] + \mathds{P}[B_2]*\mathds{P}[A\vert B_2]+... $\qed\medskip\\
 \textbf{Beispiel}: Population Personen: krank und gesund\\
 1\% der Population ist krank.\medskip\\
 \begin{tabbing}
-	Schnelltest:\= Bei einer Kranken Person mit Wkeit 90\% positiv.\\
+	Schnelltest: \= Bei einer Kranken Person mit Wkeit 90\% positiv.\\
 	\> Bei einer gesunden Person mit Wkeit 20\% positiv
 \end{tabbing}
 A= ''Test ist Positiv''\hspace{1cm} $\mathds{P}[A]= 0,001*0.9+0,99*0,2 = 0,207$\smallskip\\
@@ -104,4 +103,5 @@ $ \mathds{P}[B_1]=0,01 \Rightarrow  \mathds{P}[B_2] =0,99$\smallskip\\
 $\mathds{P}[A \vert B_1] = 0,9 \qquad [\text{nicht } \mathds{P}[A\cap B_1]$\smallskip
 $\mathds{P}[A\vert B_2] = 0,2$\smallskip\\
 $\mathds{P}[A] = \mathds{P}[B_1]*\mathds{P}[A\vert B_1] + \mathds{P}[B_2]*\mathds{P}[A\vert B_2]$\smallskip\\
-$=0,001*0.9+0.99*0,2$
+$=0,01*0.9+0.99*0,2$\medskip\\
+\includegraphics[width=0.9\textwidth]{img/baum.PNG}\\
