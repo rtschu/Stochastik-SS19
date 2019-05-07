@@ -1,0 +1,38 @@
+\chapter{Harmonische Reihe}
+\section{Harmonische Reihe}
+\newcommand{\harmonisch}{\frac{1}{2}+\frac{1}{3}+\frac{1}{4}+\dots}
+\textbf{Definition}: Harmonische Zahlen $H_n = 1 + \frac{1}{2}+\frac{1}{3}+\frac{1}{4}+\dots+\frac{1}{n}$\smallskip\\
+Harmonische Reihe: $\frac{1}{2}+\frac{1}{3}+\frac{1}{4}+\dots = \underset{n\rightarrow\infty}{\text{lim} }H_n$\medskip\\
+\subsection{Satz 10.1}
+$\harmonisch = + \infty \qquad H_n = \harmonisch$\medskip\\
+d.h. $\forall$ A (egal wie groß) $\exists$ n = n(A) : $H_n \geq A$\smallskip\\
+\textbf{Beweis}:\\
+\img{0.7}{harm}\\
+$H_2 \geq 1 + \frac{1}{2}, H_4 \geq 1+\frac{1}{2}+\frac{1}{2}, H_8 \geq 1+\frac{1}{2}+\frac{1}{2}+\frac{1}{2}$\\
+$H_{2^l}\geq 1+\frac{l}{2}$\smallskip\\
+$A=7*10^6 \quad 1+\frac{l}{2} \geq A\quad l \geq 2A-2$\\
+$H_{2^{1+10^6-2}} \geq 7 * 10^6$
+\subsection{Satz 10.2, Euler, 1734}
+$\underbrace{\harmonisch+\frac{1}{n}}_{H_n\rightarrow\infty}-\underbrace{\text{log }n}_{\rightarrow\infty} $ konvergiert für n $\rightarrow$ $\infty$ gegen eine Konstante.\medskip\\
+\textbf{Bemerkung}: Die Konstante $ \gamma $ := $\underset{n\rightarrow\infty}{\text{0}}(H_n-\text{log } n) = 0,57721\dots $ heißt\\
+Euler-Mascheroni-Konstante\smallskip\\
+\textbf{Beweis}: $\int_1^n \dfrac{1}{x} dx$ = (log x) $  \big|_1^n$ 1 n = log n - $\underbrace{\text{log 1}}_{0}$ = log n\smallskip\\
+\img{0.7}{log}\\
+$H_{n-1}  - \text{log } n = $Fläche $S_n$\\
+$S_1<S_2<S_3<\dots \qquad$\\$ \text{Außerdem: }S_n \leq 1\: \forall n \in \mathds{N}$
+\img{0.3}{1}\\
+D.h. $\exists$ lim $S_n$ exisitert und ist $\leq$1 und $\geq$ 0\medskip\\
+$H_n - \text{log }n = \underbrace{H_{n-1}-\text{log }n}_{\text{Konv. für n}\rightarrow\infty} + \underbrace{\frac{1}{n}}_0$, also konvertgiert $H_n - \text{log }n$ gegen einem Limes, der zwischen 0 und 1 liegt. \qed\medskip\\
+$\harmonisch+\dfrac{1}{n} = \text{log }n + \gamma + \underbrace{\varepsilon_n}_\text{Fehler der Appr.}\text{, wobei }\varepsilon_n \rightarrow 0 \text{ für } n\rightarrow\infty$
+\section{Alternierende harm.Reihe}
+\newcommand{\altharm}{1-\frac{1}{2}+\frac{1}{3} - \frac{1}{4}+\dots}
+Alternierende harm. Reihe: $\altharm = log 2$\medskip\\
+\textbf{Beweis}:\\
+$S_{2n} = \altharm - \frac{1}{2n}$\smallskip\\
+$S_{2n+1}= \altharm -  \frac{1}{2n} + \frac{1}{2n+1}$\medskip\\
+$S_{2n} = \altharm - \frac{1}{2n} = H_{2n}-2(\frac{1}{2}+\frac{1}{4}+\dots+\frac{1}{2n})$\smallskip\\
+$=H_{2n} - (1+\frac{1}{2}+\frac{1}{3}+\dots+\frac{1}{n})=H_{2n}-H_n = $\smallskip\\
+$\underset{\text{Kor.}}{=} (\text{log }2n+ \gamma + \varepsilon_{2n}) - (\text{log }n + \gamma + \varepsilon_n)$\smallskip\\
+$=\text{log }2n - \text{log }n + \varepsilon_{2n}-\varepsilon_n$\smallskip\\
+$=\text{log }2 + \underbrace{\varepsilon_{2n}}_0-\underbrace{\varepsilon_n}_0\quad$
+$\underset{n\rightarrow\infty}{\rightarrow} log 2$

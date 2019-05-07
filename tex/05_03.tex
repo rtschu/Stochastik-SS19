@@ -83,10 +83,10 @@ $	\Rightarrow X(\omega)=y_i$\medskip\\
 Dann gilt $\mathds{E}[x+y] = \mathds{E}X+\mathds{E}y$\medskip\\
 \textbf{Beweis}: \\
 $\mathds{E}[x+y] \underset{9.1}{=} \sum_{\omega \in \Omega}(x+y)(\omega)*p(\omega)=$\smallskip\\
-$=\sum_{\omega \in \Omega} (X(\omega)+y(\omega))p(\omega) = \sum_{\omega \in \Omega}X(\omega)*p(\omega)+\sum_{\omega \in \Omega}y(\omega)*p(\omega)\overset{9.1}{=}\mathds{E}X+\mathds{E}y\qed$\medskip\\
-\textbf{Bem.} Allgemein: Für ZV $X_1,\dots,X_n : \Omega \rightarrow \mathbb{R}:\mathds{E}[X_1+\dots+X_n] = \mathds{E}X_1+\dots+\mathds{E}X_n$\medskip\\
+$=\sum_{\omega \in \Omega} (X(\omega)+y(\omega))p(\omega) = \sum_{\omega \in \Omega}X(\omega)*p(\omega)+\sum_{\omega \in \Omega}y(\omega)*p(\omega)\overset{9.1}{=}$\\$\mathds{E}X+\mathds{E}y\qed$\medskip\\
+\textbf{Bem.} Allgemein: Für ZV $X_1,\dots,X_n : \Omega \rightarrow \mathbb{R}:\mathds{E}[X_1+\dots+X_n] =$\\$ \mathds{E}X_1+\dots+\mathds{E}X_n$\medskip\\
 \textbf{Bem.} Sei $X:\Omega \rightarrow \mathbb{R}, a\in \mathbb{R}, \mathds{E}[a*X]=a*\mathds{E}X$\medskip\\
-\textbf{Beispiel}: n Würfel. Augenzahlen: $X_1,\dots,X_n$ \hspace{1cm} Augensumme: S=$X_1+\dots+X_n$
+\textbf{Beispiel}: n Würfel. Augenzahlen: $X_1,\dots,X_n$ \hspace{0.2cm} Augensumme: S=$X_1+\dots+X_n$
 $$\mathds{E}S=\mathds{E}X_n+\ldots+ \underbrace{\mathds{E}X_n}_{=3,5} = n*3,5$$
 \textbf{Beispiel}: Lotto 6 aus 49. (ohne Zurücklegen) Tippe auf \{1,\dots,6\} \\
 Sei S die Anzahl der richtig geratenen Zahlen.\medskip\\
@@ -128,3 +128,70 @@ Dann gilt $\mathds{E}[X*Y]= \mathds{E}X*\mathds{E}Y$\medskip\\
 	\item $\mathds{E}[x+y] = \mathds{E}x+\mathds{E}y \quad \forall x,y$
 	\item $ \mathds{E}[x*y] = \mathds{E}x*\mathds{E}\text{$ y $ } \forall \text{unabh. } x,y$
 \end{enumerate}
+\textbf{Beweis}:\\
+Notation:\\
+Werte von X: 
+\begin{tabular}{|c|c|c|}
+	$x_1$&$x_2$&\dots\\\hline
+	$p_1$&$p_2$&\dots
+\end{tabular} \\
+$\mathds{P}[X=x_i]=p_i$\smallskip\\
+Werte von Y: 
+\begin{tabular}{|c|c|c|}
+	$y_1$&$y_2$&\dots\\\hline
+	$q_1$&$q_2$&\dots
+\end{tabular}\\
+$\mathds{P}[Y=y_j]=p_j$\smallskip\\
+Betrachte Er.: $A_{ij}=\{X=x_i, y=y_j\}=\{\omega \in \Omega : X(\omega)=xi,y(\omega)=y_j\}$\medskip\\
+$\Omega = \underset{i,j}{\dot\cup}A_{ij}$, d.h. $A_{ij}$ bilden disj. Zerlegung von $\Omega$
+\img{0.4}{tab}\\
+$\mathds{E}[x*y] \underset{9.1}{=} \sum_{\omega\in \Omega} p(\omega)*X(\omega)*Y(\omega)=$\medskip\\
+$\sum_{i,j}\sum_{\omega\in A_{ij}} (p(\omega)*X(\omega)Y(\omega)x_iy_j)=$\smallskip\\
+=$\sum_{i,j}(x_iy_j\sum_{w\in A_{ij}})=\sum_{i,j}x_iy_j\mathds{P}[A_{ij}]$\medskip\\
+$\mathds{P}[A_{ij}]=\mathds{P}[X=x_i, Y=y_j] \underset{\text{x,y unabh ZV}}{=} \mathds{P}[X=x_i]*\mathds{P}[Y=y_i]=p_i*q_j$\bigskip\\
+$=\sum_{i,j}x_iy_jp_iq_j = \sum_{i,j}(x_ip_i)(y_jq_j)$\smallskip\\
+$=(\sum_ix_ip_i)(\sum_jy_jq_j) = \mathds{E}X*\mathds{E}Y \qed$\medskip\\
+\textbf{Beispiel}: (zu Unabh. von ZV)\\
+n faire Würfel. $X_i$ Aufenzahl die der i-te Würfel zeigt\\
+ $\Omega$ = \{($a_1,...,a_n$)\} def $X_i(a_1,...,a_n) = a_i$\medskip\\
+ \textbf{Behauptung 1}: Zufallsvariablen $X_1,\dots,X_n$ sind unabh.\medskip\\
+ \textbf{Beweis 1}:\\
+ Z.z. $\mathds{P}[X_i = x_1,...,X_n=x_n] = \mathds{P}[X_i=x_i]*\dots\mathds{P}[X_n=x_n]$\smallskip\\
+ \textbf{Lösung}:\\
+$\{X_1 = x_1,\dots X_n = x_n\}=
+\begin{cases}
+(x_1,\dots,x_n), &\text{falls }\forall i:x_i \in \{1,...,6\}\\
+\emptyset, & \text{falls } \exists i : x_i \notin \{1,...,6\}
+\end{cases}$\smallskip\\
+LS = $
+\begin{cases}
+\dfrac{1}{6^n},&\text{falls } \forall i: x_i \in \{x_i \in \{1,...,6\}\\
+0,&\text{sonst}
+\end{cases}$\medskip\\
+RS: $\mathds{P}[X_1=x_1] = ?$\\
+\{$X_1=x_1$\}=$\begin{cases}
+\{(x_1,a_2,...,a_n):a_2,...,a_n \in \{1,\dots,6\}\}, &\text{falls }x_1 \in \{1,\dots,6\}\\
+\emptyset, & \text{falls } \exists i : x_i \notin \{1,...,6\}
+\end{cases}$\medskip\\
+$\#\{X_1=x_i\}=\begin{cases}
+6^{n-1},&\text{falls }x_1\in \{1,\dots,6\}\\
+0,&\text{sonst}
+\end{cases}$\medskip\\
+$\mathds{P}[X_1=x_1]=\begin{cases}
+\dfrac{6^{n-1}}{6^n},&\text{falls }x_1 \in \{1,\dots,6\}\\
+0,&\text{sonst}
+\end{cases}$\medskip\\
+RS=$\begin{cases}
+\dfrac{1}{6}*\dfrac{1}{6}*\dots\dfrac{1}{6} = \dfrac{1}{6^n},&\text{falls } \forall A_i : x_i \in \{1,\dots,6\}\\
+0, & \exists i:x_i \notin \{1,\dots,6\}
+\end{cases}$\\
+LS = RS $\Rightarrow X_1,\dots,X_n$ unabh. ZV.\newpage
+\textbf{Behauptung 2}: Sei S = $X_1 + \dots + X_n$ die Augensumme.\\
+Dann sind $X_1$ und S abh. ZV\medskip\\
+\textbf{Beweis}: Z.z. $\exists$ a,b mit $\mathds{P}[X_1=a,S=b] \neq \mathds{P}[X_1=a]*\mathds{P}[S=b]$\\
+Wir zeigen das für a =1, b=6*n\medskip\\
+\textbf{LS}: $\mathds{P}[\underbrace{X_1=1,S=6n}_\text{Treten nicht gleichzeitig ein}] = 0$\smallskip\\
+\textbf{RS}: $\mathds{P}[X_1 = 1] = \dfrac{1}{6}$\\$\mathds{P}[S=6n]=\dfrac{1}{6^n}$\medskip\\
+RS = $\dfrac{1}{6}*\dfrac{1}{6^n} \neq 0$\\
+LS $\neq$ RS $\Rightarrow$$X_1,S$ abh. \qed
+ 
