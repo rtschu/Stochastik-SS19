@@ -35,4 +35,40 @@ $=H_{2n} - (1+\frac{1}{2}+\frac{1}{3}+\dots+\frac{1}{n})=H_{2n}-H_n = $\smallski
 $\underset{\text{Kor.}}{=} (\text{log }2n+ \gamma + \varepsilon_{2n}) - (\text{log }n + \gamma + \varepsilon_n)$\smallskip\\
 $=\text{log }2n - \text{log }n + \varepsilon_{2n}-\varepsilon_n$\smallskip\\
 $=\text{log }2 + \underbrace{\varepsilon_{2n}}_0-\underbrace{\varepsilon_n}_0\quad$
-$\underset{n\rightarrow\infty}{\rightarrow} log 2$
+$\underset{n\rightarrow\infty}{\rightarrow} log 2$\medskip\\
+
+\textbf{Aufgabe}: Schnecke und Auto\\
+$1+\dfrac{1}{2}+\dfrac{1}{3}+\dots = \infty$\medskip\\
+\imgHere{schneckeUndAuto}\\
+\textbf{Zeige}: Schnecke überholt das Auto in endlicher Zeit\\
+$\altharm$ = log 2\smallskip\\
+$\underbrace{1+\frac{1}{3}-\frac{1}{2}}+\underbrace{\frac{1}{5}+\frac{1}{7}-\frac{1}{4}}+\underbrace{\frac{1}{9}+\frac{1}{11}-\frac{1}{6}}\dots = \frac{3}{2}\text{ log 2}$\medskip\\
+Reihe $\sum_{n=1}^{\infty}$ heißt absolut konvergent, wenn $\sum_{n=1}^\infty |a_n|<\infty$\\
+\textbf{Beispiel}:$\altharm $ ist konvergent aber nicht absolut konvergent.\medskip\\
+\textbf{Satz}: In einer absolut konvergenten Reihe kann man die Terme umordnen, ohne dass sich die Summe ändert.\\
+\textbf{Riemann'scher Umordnungssatz}: $\forall a \in \mathbb{R}$ gibt es eine Umordnung der Reihe $\altharm$, die gegen a konvergiert.\medskip\\
+\textbf{Beweis}: Sei $a\geq 0$\\
+Ungerade Terme: 1, $\frac{1}{3}, \frac{1}{5},\dots \quad 1 + \frac{1}{3}+\frac{1}{5}\dots = \infty$\medskip\\
+Gerade Terme: $\frac{1}{2},\frac{1}{4},\dots \quad \frac{1}{2}+\frac{1}{4}+\dots = \infty$\medskip\\
+Nehme ungerade Terme bis die Summe $\geq$ a wird: 
+$$1+\dfrac{1}{3}+\dfrac{1}{5}+\dots+\frac{1}{n_1}\geq a$$
+Ziehe gerade Terme abm bis die Summe $\leq$ a wird
+$$1+\dfrac{1}{3}+\dfrac{1}{5}+\dots+\frac{1}{n_1}-\dfrac{1}{2}-\dfrac{1}{4}-\dots-\frac{1}{m_1}\leq a$$
+Addiere ungerade Terme bis die Summe wieder $\geq$ a wird
+$$1+\dfrac{1}{3}+\dfrac{1}{5}+\dots+\frac{1}{n_1}-\dfrac{1}{2}-\dfrac{1}{4}-\dots-\frac{1}{m_1}+\dfrac{1}{n_1+2}+\dfrac{1}{n_1+4}+\dots +\dfrac{1}{n_2}\geq a$$usw. \qed\medskip\\
+\textbf{Bemerkung} Über EWert von ZV mit abzählbar $\infty$-vielen Werten\smallskip\\
+Betrachte ZV X: \hspace{1cm} Werte: \begin{tabular}{c|c|c|c}
+	$x_1$&$x_2$&$x_3$&\dots\\\hline
+	$p_1$&$p_2$&$p_3$&\dots
+\end{tabular}\medskip\\
+$\mathds{E}X=\sum_{i=1}^\infty x_ip_i ?$ \\
+\textbf{Problem:} Keine ''kanonische'' Reihenfolge der Werte $x_i$ Wenn $\sum_{i=1}^\infty$ nicht \textbf{absolut} konv. $\Rightarrow$kann sich das Ergebnis durch Umordnung ändern\medskip\\
+\textbf{Definition}: Sei X ZV wie oben Def.
+$$S_+ = \sum_{i:x_i \geq 0}x_ip_i,\quad S_ = \sum_{i:x_i < 0}|x_i|p_i$$
+\textbf{Fälle}:$
+\begin{cases}
+	 \mathds{E}X\overset{\text{def}}{=}\sum_{i=1}^\infty x_ip_i = S_+-S_-,  &\text{falls }S_+ < \infty, s_- < \infty\\
+	 \mathds{E}X\overset{\text{def}}{=}+\infty,&\text{falls } S_+=\infty, s_- < \infty\\
+	\mathds{E}X \overset{\text{def}}{=}-\infty,&\text{falls } S_+ < \infty, S_- = \infty\\
+\mathds{E}X \text{nicht definiert }, & \text{falls } S_+ = \infty, S_-=\infty
+\end{cases}$
