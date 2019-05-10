@@ -1,0 +1,67 @@
+\chapter{Diskrete Verteilungen}
+\section{Uniforme Verteilungen}
+\textbf{Definition}:\\
+ZV X heißt uniform, falls verteilt auf der Menge \{$x_1$,\dots$x_n$\} ($x_i \in \mathds{R}$), falls: 
+$$\mathds{P}[X=x_i] = \dfrac{1}{n} \forall i = 1,\dots,n$$
+\textbf{Bemerkung}: $\mathds{E}X= x_1*\dfrac{1}{n}+x_2\dfrac{1}{n}+\dots + x_n *\dfrac{1}{n} = \dfrac{x_1+\dots+x_n}{n} \quad [\text{arithmetisches Mittel}]$\medskip\\
+\textbf{Beispiel}:\\
+Sei X uniform verteilt auf \{1,2,\dots,n\} $\mathds{E}X=\dfrac{1+2+\dots+n}{n}=$\smallskip\\
+1+2+\dots + n = $\dfrac{n(n+1)/2}{n}=\dfrac{n+1}{2}$ \\
+\imgHere{Treppe}\\
+$=\dfrac{n^2}{n}+\dfrac{n}{2}=\dfrac{n(n+1)}{2}$\medskip\\
+\begin{math}
+1 + 3 + 5 + 7 + \dots + (2n-1)\\
+n = 1: 1\\
+n = 2: 1+3=4\\
+n = 3: 1 + 3 + 5 = 9\\
+\dots
+\end{math}
+Vermutung: $1 + 3 + 5 + \dots (2n-1) = n^2$\\
+Proof by picture:\\
+\imgHere{proofByPicture}
+\section{Binomialverteilung}
+Ein Bernoulli-Exp: Zwei Ausgänge $\underbrace{\text{Erfolg}}_p$ (oder 1) und $\underbrace{\text{Misserfolg}}_{1-p}$ (0)\medskip\\
+\textbf{Definition}:\\
+ZV X heißt Bernoulli-verteilt, falls 
+$$\mathds{P}[x=1]=p,\mathds{P}[x=0]=1-p$$
+Bez: $x^\sim$ Bern(p)\\
+$\mathds{E}X=1*p+0*(1-p)=p$\smallskip\\
+Nn betrachte n unabh. Bern-Exp. Grundmenge: $\Omega =\{(0,1)^n:a_i \in \{0,1\}\}$\smallskip\\
+$\mathds{P}[(0,0,1,0,1,1)]=(1-p)*(1-p)*p*(1-p)*p*p = p^3(1-p)^3$\smallskip\\
+$\mathds{P}[(A_1,\dots,a_n)]= p^k(1-p)^{a-k}$, wobei K $= a_1,+\dots,+a_n $(Anzahl Erfolge)\medskip\\
+Für $p=\frac{1}{2} \Rightarrow$ LaPlace-Experiment\\
+Für $p \neq \frac{1}{2} \Rightarrow$ kein LaPlace-Experiment
+\subsubsection{Satz 11.1}
+Sei X die Anzahl der Erfolge in einem n-fachen Bernoulli-Experiment.\\
+Dann gilt: $\mathds{P}[x=k]= \binom{n}{k}*p^k(1-p)^{n-k} \quad k = 0,1,\dots,n$\medskip\\
+\textbf{Beispiel}:\\
+$n=4, k=2$\smallskip\\
+\begin{tabular}{ll}
+$	\mathds{P}[(1,1,0,0)] = p^2*(1-p)^2$ & (1,0,1,0)\\
+$\mathds{P}[(0,1,1,0)= p^2(1-p)^2$ & (1,0,0,1)\\
+	&(0,0,1,1) 
+\end{tabular}\smallskip\\
+Alle 6 Ausgänge haben Wkeit $p^2(1-p)^2$\medskip\\
+\textbf{Definition}:\\
+ZV X wie oben heißt binomialverteilt mit Param n und p\\
+Bez: $x^\sim$Bin(n,p)\smallskip\\
+\textbf{Bemerkung}: $\sum_{k=0}^n\mathds{P}[x=k]=\sum_{k=0}^n\binom{n}{k}p^k(1-p)^{n-k}\overset{Bin. Formel}{=}(p+1-p)^n = 1^n=1$\medskip\\
+\subsubsection{Satz 11.2}
+Sei $X^\sim$Bin(n,p)\\
+Dann gilt $\mathds{E}X=n*p$\medskip\\
+\textbf{Beweis}:\\Sei 
+$x_i = \begin{cases}
+1&,\text{falls im i-ten Experiment Erfolg eintritt}\\
+0&,\text{sonst}
+\end{cases}$\smallskip\\
+$\underbrace{x}_{\substack{\text{Anzahl d. Erfolge}\\\text{ in Exp. 1,...,i}}} = x_1 + x_2 + \dots + x_n$\smallskip\\
+$\mathds{E}x = \mathds{E}[x_1+\dots+x_n]=\overbrace{\mathds{E}x_1}^p+\dots + \overbrace{\mathds{E}x_n}^p = n*p$\smallskip\\
+Dann $\mathds{E}x_i = 1*p + 0*(1-p)=p$ \qed\medskip\\
+\textbf{Beispiel}: Werfe faire Münze n Mal\\
+$\mathds{P}[\text{die Münze zeigt k mal Kopf}]=\binom{n}{k}*(\frac{1}{2}^k)*(\frac{1}{2}^{n-k}) = \dfrac{\binom{n}{k}}{2^n}$\smallskip\\
+\textbf{Beispiel}: Werfe fairen Würfel n Mal\\
+$\mathds{P}[\text{k Sechsen}]=\binom{n}{k}*(\frac{1}{6})^k*(\frac{5}{6})^{n-k}$\smallskip\\
+\textbf{Beispiel}: Betrachte Urne mit 10 roten und 20 schwarzen Bällen. \\Wir ziehen 15 Bälle \textbf{mit} Zurücklegen.\\
+Bestimme Wkeit, dass bei 8 Ziehungen roter Ball gezogen wurde\smallskip\\
+n = 15, p = $\frac{1}{3}$\\
+Gesuchte Wkeit ist: $\binom{15}{8}*(\frac{1}{3})^8*(\frac{2}{3}^7)$
