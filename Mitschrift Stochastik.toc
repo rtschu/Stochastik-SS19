@@ -40,3 +40,9 @@
 \contentsline {section}{\numberline {8.2}Binomialverteilung}{42}{section.8.2}
 \contentsline {subsubsection}{\nonumberline Satz 11.1}{43}{section*.9}
 \contentsline {subsubsection}{\nonumberline Satz 11.2}{43}{section*.10}
+\contentsline {chapter}{\numberline {9}Geometrische Verteilung}{45}{chapter.9}
+\contentsline {subsubsection}{\nonumberline Satz 11.3}{45}{section*.11}
+\contentsline {subsubsection}{\nonumberline Exkurs \IeC {\"u}ber die geometrische Reihe}{46}{section*.12}
+\contentsline {subsubsection}{\nonumberline Geometrische Verteilung}{46}{section*.13}
+\contentsline {subsubsection}{\nonumberline Satz 11.4}{46}{section*.14}
+\contentsline {subsubsection}{\nonumberline Satz 11.5: Vergessenseigenschaft der Geo-Vert}{48}{section*.15}
