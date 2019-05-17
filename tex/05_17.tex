@@ -1,0 +1,88 @@
+\chapter{Poisson Verteilung}
+\section{Exkurs über die Zahl e}
+\textbf{Beispiel}: Preis steigt jeden Tag um 1 \%\\ Am Anfang: 1 Euro\\ Preis nach 100 Tagen = ?\smallskip\\
+\textbf{Lösung}:\\
+x $\rightarrowtail x + \dfrac{x}{100}$\smallskip\\
+\begin{tabular}{c|c|c|c|c}
+	Tag 0&Tag 1&Tag 2&\dots&Tag 100\\\hline
+\rule{0pt}{4ex}    	1 &$1+\dfrac{1}{100}$&$\left(1+\dfrac{1}{100}\right)^2$&\dots&$\left(1+\dfrac{1}{100}\right)^{100}$
+\end{tabular} $ \approx $ 2,7\medskip\\
+Betrachte $a_n = (1+\dfrac{1}{n})^n$\\
+n = 100: \textbf{2,7}04813\dots\\
+n = 10000: \textbf{2,7181}459 \dots\\\dots\medskip\\
+\textbf{Definition}: e = $\underset{n\rightarrow\infty}{\text{lim}} = (1+\dfrac{1}{n})^n = 2,7182818\dots$\medskip\\
+$1 + \dfrac{1}{n}\underset{n \rightarrow \infty}{\rightarrow}1 \quad \text{Unbestimmtheit } 1^\infty$\medskip\\
+\textbf{Formel 1}:\\
+$(1 + \dfrac{x}{n})^n=\left(\left(1+\dfrac{x}{n}\right)^{\dfrac{n}{x}}\right)^x = \left(\left(1+\dfrac{1}{m}\right)^m\right)^x\underset{n \rightarrow\infty}{\rightarrow}e^x\quad x = \text{konst}, n \rightarrow \infty$\medskip\\
+\textbf{Beispiel}: $(1+\dfrac{1}{n})^n = (1+\dfrac{1}{n^2})^{n^2*\dfrac{1}{n}}= ((1+\dfrac{1}{n^2})^{n^2})^{\dfrac{1}{n}} \underset{n\rightarrow\infty}{\rightarrow} e^0 = 1$\medskip\\
+\textbf{Formel 2}:\\
+$e^x = \sum_{k=0}^{\infty}\dfrac{x^k}{k!}=1+x+\dfrac{x^2}{2!}+\dfrac{x^3}{3!}+\dots$\smallskip\\
+\textbf{Beweis}:
+\begin{enumerate}
+	\item $(a+\dfrac{x}{n})^n \rightarrow e^x$
+	\item $(1+\dfrac{x}{n})^n = \sum_{k=0}^n \binom{n}{k}(\dfrac{x}{n})^k*1 {n-k}$\smallskip\\$=\sum_{k=0}^n \dfrac{n(n-1)*\dots*(n-k+1)}{k!}*\dfrac{x^k}{n^k}$\smallskip\\
+	$= \sum_{k=0}^n \dfrac{x^k}{k!}\underbrace{\dfrac{n(n-1)*\dots*(n-k+1)}{n^k}}_{1} \underset{n \rightarrow \infty}{\rightarrow}\sum_{k=0}^\infty\dfrac{x^k}{k!}$\medskip\\
+	$\dfrac{n(n-1)\dots(n-k+1)}{n^k}=\underbrace{\dfrac{1}{n}}_1*\underbrace{\dfrac{n-1}{n}}_1 \dots *\underbrace{\dfrac{n-k+1}{n}}_1 \underset{n\rightarrow\infty}{\rightarrow}1$
+\end{enumerate}
+\textbf{Beispiel}: x = 1
+$$e = 1+1+\dfrac{1}{2!}+\dfrac{1}{3!}+\dots$$
+\section{Poisson Verteilung}
+\newcommand{\ntoinf}{\underset{n\rightarrow\infty}{\rightarrow}}
+Sehr viele Bern.-Exp: $n\rightarrow \infty$\\
+Sehr kleine Erfolgswahrscheinlichkeit: $p=\dfrac{\lambda}{n} \quad \lambda =\text{ const.}\quad \lambda >0$\smallskip\\
+Die Anzahl der Erfolge ist ZV $S_n \sim$ Bin$(n,\dfrac{\lambda}{n}) \quad \mathds{E}S_n = n*\dfrac{\lambda}{n}=\lambda$\medskip\\
+\textbf{Beispiel}: Wkeit, dass es keinen Erfolg gibt: $\mathds{P}[S_n = 0] = (1-\dfrac{\lambda}{n})*(1-\dfrac{\lambda}{n})*\dots*(1-\dfrac{\lambda}{n}) = (1-\dfrac{\lambda}{n})^n \ntoinf e^{-\lambda} \quad [\text{Formel 1}] x = -\lambda$\medskip\\
+$\underset{\text{Wkeit k Erfolge}}{\mathds{P}[S_n=k]} = \binom{n}{k}*p^k(1-p)^{n-k} = \binom{n}{k}*(\dfrac{\lambda}{n})^k(1-\dfrac{\lambda}{n})^{n-k} = \underbrace{(1-\dfrac{\lambda}{n})^n}_{e^{-\lambda}}*\underbrace{(1-\dfrac{\lambda}{n})^{-k}}_1 *\lambda^k$\medskip\\
+$*\dfrac{n(n-1)\dots(n-k+1)}{k!n^k}\ntoinf e^{-\lambda}*1*\lambda^k*1*\dfrac{1}{k!}$\smallskip\\
+$=e^{-\lambda}\dfrac{\lambda^k}{k!}, \quad k = 0,1,2,\dots$\medskip\\
+\textbf{Definition}: ZV X heißt Poissonverteilt mit Parameter $\lambda >0$, falls 
+$$\mathds{P}[x=k]=e^{-\lambda}*\dfrac{\lambda^k}{k!}, \quad k=0,1,2,\dots$$
+\textbf{Bemerkung}:
+$$\sum_{k=0}^\infty \mathds{P}[x=k]=\sum_{k=0}^\infty e^{-\lambda}\dfrac{\lambda^k}{k!}=e^{-\lambda} \sum_{k=0}^\infty \dfrac{\lambda^k}{k!}=e^{-\lambda}*e^\lambda = 1$$
+\subsection{Satz 11.6: Poisson-Grenzwertsatz}
+Sei $S_n \sim$Bin($n\dfrac{\lambda}{n}$), $\lambda >0$ konstant.\smallskip\\
+Dann gilt
+$$\underset{n\rightarrow\infty}{\text{lim}}\mathds{P}[S_n=k] = \dfrac{e^{-\lambda}\lambda^k}{k!}\quad \forall k = 0,1,2,\dots$$
+\begin{tabbing}
+	\textbf{Beispiel}:\= 100 Personen\hspace{1cm}A=''mind. eine Person hat heute Geburtstag''\\$\mathds{P}[A] = ?$
+\end{tabbing}
+\textbf{Lösung 1 (Exakt)}: n=100, Bern-Exp\\
+Erfolge im Exp i $ \Leftrightarrow $ Person i hat heute Geburtstag\\Erfolgswkeit p = $\dfrac{1}{365}$\smallskip\\
+$A^C$ ''keine Person hat heute Geburtstag''\\
+$\mathds{P}[A^C] = \binom{n}{0}p^0(1-p)^n=(1-p)^n $\smallskip\\
+$\mathds{P}[A]=1-\mathds{P}[A^C]=1-(1-p)^n=1-\left(1-\dfrac{1}{365}\right)^{100} = 0,2399$\medskip\\
+\textbf{Lösung 2 (Approximation)}: Anzahl d. Personen die heute Geburtstag haben: $S_n \sim $ Bin($\underbrace{100}_n,\underbrace{\dfrac{1}{365}}_p$)
+$$\mathds{P}[A]=\mathds{P}[S_n \geq 1] = 1-\mathds{P}[S_n=0]$$
+$$S_n \sim \text{Bin}(\underbrace{100}_n,\underbrace{\dfrac{1}{365}}_{\dfrac{\lambda}{n}})\approx \text{Poi}(\underbrace{\dfrac{100}{365}}_\lambda)$$
+$\mathds{P}[A] = 1-\mathds{P}[S_n=0] \approx 1 - \mathds{P}[\text{Poi}\left(\dfrac{100}{365}\right)=0]$\smallskip\\
+$=1-e^{-\lambda}\dfrac{\lambda^0}{0!}=1-e^{-\lambda}=1-e^{-\dfrac{100}{365}} = 0,2396$\medskip\\
+\textbf{Beispiel}: 96 \% Prozent der Fluggäste erscheinen. 75 Flugkarten für 73 Plätze verkauft.\medskip\\
+$\mathds{P}[\underbrace{\text{alle Fluggäste bekommen Platz}}_A] = ?$\medskip\\
+\textbf{Lösung 1 (Exakt)} Die Anzahl der Gäste, die erscheinen: ZV $T_n \sim $Bin(75,096)\smallskip\\
+$\mathds{P}[A] = \mathds{P}[T_n\leq 73] = 1-\mathds{P}[T_n \geq 74]=1-\mathds{P}[T_n = 74]-\mathds{P}[T_n=75]$\smallskip\\
+=$1-\binom{75}{74}p^{74}(1-p)^1\binom{75}{75}*p^{75}(1-p)^0$\smallskip\\
+$\underset{p = 0,96}{=} 1- 75*0,96^{74}*0,04-0,96^{75}=0,8069\dots$\medskip\\
+\textbf{Lösung 2 (Approx)}: $T_n \sim \text{Bin}(\underbrace{75}_n,\underbrace{0,96}_{\dfrac{\lambda}{n}})  \approx \text{Poi}(75*0,96)$\smallskip\\
+Falsch, da 0,96 nicht klein ist\medskip\\
+Betrachte Gäste, die nicht erschienen sind: Anzahl:\smallskip\\
+$S_n \sim \text{Bin}(\underbrace{75}_\text{groß},\underbrace{0,04}_\text{klein}) \approx \text{Poi}(\underbrace{75*0,04}_\lambda)$\medskip\\
+$\mathds{P}[A] = \mathds{P}[S_n \geq 2] = 1- \mathds{P}[S_n = 0] - \mathds{P}[S_n = 1] \approx 1- e ^{-\lambda}\dfrac{\lambda^0}{0!}-e ^{-\lambda}\dfrac{\lambda^1}{1!}$\smallskip\\
+$=1-e^{-75*0,04}-e^{-75*0,04}*75*0,04=0,8008$
+\subsection{Satz 11.7}
+Sei $x \sim $ Poi($ \lambda $) ($\lambda >0$). Dann gilt $\mathds{E}x= \lambda$\medskip\\
+\textbf{Beweis}:\\
+\begin{math}
+\mathds{E}x = \sum_{k=0}^\infty k \mathds{P}[x=k]= \sum_{k=0}^\infty k *e^{-\lambda}\dfrac{\lambda^k}{k!}\smallskip\\
+=\sum_{k=1}^\infty ke^{-\lambda}\dfrac{\lambda^k}{k!} = e^{-\lambda}\sum_{k=1}^\infty \dfrac{\lambda^k}{(k-1)!}\smallskip\\
+=e^{-\lambda}\lambda\sum_{k=1}^\infty \dfrac{\lambda^{k-1}}{(k-1)!}\overset{\text{l=k-1}}{=} e^{-\lambda}\lambda\sum_{l=0}^{\infty}\dfrac{\lambda^l}{l!}=e^{-\lambda} \lambda e^\lambda = \lambda
+\end{math}\medskip\\
+\begin{tabbing}
+	\textbf{Faltungsformel}: \= Seien x,y unabh. ZV mit Werten in \{0,1,2,\dots\}\\
+	\> Vert von x,y seien gegeben\\
+	\> Vert von x+ ?
+\end{tabbing} 
+\textbf{Lösung} Werte von x+y sind in \{0,1,\dots\}\smallskip\\
+Für $n \in \{0,1,2,\dots\} \quad \mathds{P}[x+y=n]=\sum_{k=0}^n\mathds{P}[x=k,y=n-k] \overset{x,y \text{unabh}}{=}\sum_{k=0}^n\mathds{P}[x=k]*\mathds{P}[y=n-k]$\smallskip\\
+x = $k \in \{1,2,\dots\} \quad y = n-k$\medskip\\
+\textbf{Beispiel}: $x \sim \text{Bin}(m_1,p) \quad y \sim \text{Bin}(m_2,p), \text{unabh.}$\smallskip\\
+$x+y \sim \text{Bin}(m_1+m_2,p)$
