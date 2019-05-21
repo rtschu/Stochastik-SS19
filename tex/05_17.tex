@@ -84,5 +84,34 @@ Sei $x \sim $ Poi($ \lambda $) ($\lambda >0$). Dann gilt $\mathds{E}x= \lambda$\
 \textbf{Lösung} Werte von x+y sind in \{0,1,\dots\}\smallskip\\
 Für $n \in \{0,1,2,\dots\} \quad \mathds{P}[x+y=n]=\sum_{k=0}^n\mathds{P}[x=k,y=n-k] \overset{x,y \text{unabh}}{=}\sum_{k=0}^n\mathds{P}[x=k]*\mathds{P}[y=n-k]$\smallskip\\
 x = $k \in \{1,2,\dots\} \quad y = n-k$\medskip\\
-\textbf{Beispiel}: $x \sim \text{Bin}(m_1,p) \quad y \sim \text{Bin}(m_2,p), \text{unabh.}$\smallskip\\
-$x+y \sim \text{Bin}(m_1+m_2,p)$
+\textbf{Beispiel}: $x \sim \text{Bin}(m_1,p) \quad y \sim \text{Bin}(m_2,p), \text{unabh. ZV}$\smallskip\\
+\textbf{Behauptung}:
+$x+y \sim \text{Bin}(m_1+m_2,p)$\medskip\\
+\textbf{Lösung 1}: Stochastische Lösung\\
+x ist die Anzahl d. Erf. in $m_1$ Ber-Exp. mit Erfolgswahrscheinlichkeit p\\
+y ist die Anzahl d. Erf. in $m_2$ Ber-Exp. mit Erfolgswahrscheinlichkeit p\smallskip\\
+Insgesamt gibt es $m_1+m_2$ Bern-Exp. mit Erfolgswahrscheinlichkeit p.\\x+y ist die Anzahl d. Erfolge in $m_1+m_2$ Experimenten$ \Rightarrow x+y\sim\text{Bin}(m_1+m_2,p)$\medskip\\
+\textbf{Lösung 2}:\\
+\begin{math}
+\mathds{P}[x=k]=\binom{m_1}{k}p^k(1-p)^{m_1-k}, \: k=0,1,\dots,m_1,\dots \smallskip\\
+\mathds{P}[y=k]\binom{m_2}{k}p^k(1-p)^{m_2-k}, k=0,1,\dots,m_2,\dots
+\end{math}\\
+x+y nimmt Wert in \{0,1,2,\dots\} an\smallskip\\
+\begin{math}
+\mathds{P}[x+y=n]=\sum_{k=0}^n\mathds{P}[x=k,y=n-k] = \sum_{k=0}^n\mathds{P}[x=k]*\mathds{P}[y=n-k]\smallskip\\
+\left(\{x+y=n\}=\{x=0,y=n\}\dot\cup \{x=1,x=n-1\}\dot\cup\dots\dot\cup\{x=n,y=0\}\right)\smallskip\\
+= \sum_{k=0}^n\binom{m_1}{k}p^k(1-p)^{m_1-k}*\binom{m_2}{n-k}p^{n-k}(1-p)^{m_2-(n-k)}\smallskip\\
+=p^n(1-p)^{m_1+m_2-n}\sum_{k=0}^n\binom{m_1}{k}\binom{m_2}{n-k}\smallskip\\
+\underset{\text{Vandermonde-ID}}{=}\binom{m_1+m_2}{n}p^n(1-p)^{m_1+m_2-n} \Rightarrow x+y \sim \text{Bin}(m_1+m_2,p)
+\end{math}\medskip\\
+\textbf{Beweis der Vandermonde-Identität}\smallskip\\
+$\binom{m_1+m_2}{n}=\sum_{k=0}^n\binom{m_1}{k}\binom{m_2}{n-k}$\smallskip
+Zähle die Möglichkeiten aus $m_1+m_2$ Objekten n Objekte auszuwählen
+\begin{enumerate}
+	\item Methode $\binom{m_1+m_2}{n}$ Möglichkeiten
+	\item Wähle zuerst k Objekte aus $m_1$ Objekten: $\binom{m_1}{k}$ Möglichkeiten\\
+	Aus den restlichen $m_2$ Objekten müssen wir n-k auswählen: $\binom{m_2}{n-k}$ Möglichkeiten\medskip\\
+	Insgesamt: $\binom{m_1}{k}\binom{m_2}{n-k}$ Möglichkeiten\\
+	k kann Werte 0,\dots,n annehmen: \\Insgesamt $\sum_{k=0}^n\binom{m_1}{k}\binom{m_2}{n-k}$
+\end{enumerate}
+\textbf{Beispiel}: Seien $x\sim$Poi$(\lambda), y \sim $Poi$(\mu)$unabh. ZV\\Dann gilt: $x+y\sim$Poi$(\lambda+y)$ (Übung)

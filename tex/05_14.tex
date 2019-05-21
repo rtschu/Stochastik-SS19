@@ -71,7 +71,6 @@ $=\dfrac{1}{1- 1/4}-1= \dfrac{4}{3}-1=\dfrac{1}{3}$\bigskip\\
 Jede Packung enthält ein Bild. Es gibt n mögl. Bilder, alle gleichwahrscheinlich.\\
 Erwartete Anzahl an Packungen, die man kaufen muss, um alle Bilder zu sammeln. \medskip\\
 \textbf{Lösung}:\\
-\imgHere{Sammlung}\\
 \textbf{Wartezeit}: $S_n = T_1+T_2+T_3+\dots+T_n$\smallskip\\
 mit $T_1 =1, T_2 \sim \text{Geo}(\dfrac{n-1}{n}),T_3\sim \text{Geo}(\dfrac{n-2}{n}),\dots,T_n\sim \text{Geo}(\dfrac{1}{n})$\medskip\\
 Hier ist $T_i$ die Wartezeit auf ein noch nie gesehenes Bild nachdem i-1 Bilder gesammelt wurden.\smallskip\\
@@ -79,7 +78,7 @@ $T_i \sim \text{Geo}(\dfrac{n-i+1}{n})$\smallskip\\
 \begin{tabbing}
 	$\mathds{E}S_n = \mathds{E}[T_1+\dots+T_n]$\=$ = \mathds{E}T_1+\mathds{E}T_2+\dots+\mathds{E}T_n$\\
 	\> $= \underbrace{1}_{\dfrac{n}{n}}+\dfrac{n}{n-1}+\dfrac{n}{n-2}+\dots+\dfrac{n}{1}$\\
-	\>$=n(\dfrac{1}{n}+\dfrac{1}{n-1}+\dots+1)= N(1+\dfrac{1}{2}+\dfrac{1}{3}+\dots+\dfrac{1}{n}) \qed$
+	\>$=n(\dfrac{1}{n}+\dfrac{1}{n-1}+\dots+1)= n(1+\dfrac{1}{2}+\dfrac{1}{3}+\dots+\dfrac{1}{n}) \qed$
 \end{tabbing}
 Für $n \rightarrow\infty \quad \dfrac{\mathds{E}S_n}{n \text{log}n}\rightarrow1$
 \subsubsection{Satz 11.5: Vergessenseigenschaft der Geo-Vert}
