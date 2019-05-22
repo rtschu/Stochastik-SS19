@@ -53,7 +53,7 @@ Insgesamt 4 Modelle:
 	\item \textbf{Ohne Zurücklegen und ohne Berücksichtigung der Reihenfolge}\\
 	Ausgänge: Listen der Länge K aus verschiedenen Elementen.\\
 	Allerdings wird die Reihenfolge nicht berücksichtigt, d.h. \{2,5,3\} = \{5,3,2\}\smallskip\\
-	Ausgänge sind K-elementige Teilmengen von \{1,...,n\}.\\
+	Ausgänge sind K-elementige Teilmengen von \{1,...,n\}.\medskip\\
 	$\Omega = \{A:A\subset\{1,...,n\},|A| = k\}$ oder \\
 	$\Omega = \{(a_1,...,a_k):a_i \in \{1,...,n\},\underbrace{a_1<a_2<...<a_k}_{\substack{\text{Reihenfolge wird}\\\text{ durch sortieren gelöscht}}} \}$\medskip\\
 	\#$\Omega = \frac{n*(n-1)*...*(n*K+1)}{K!}$ \hspace{0.5cm}K Objekte aus n Objekten auswählen\smallskip\\
@@ -64,7 +64,7 @@ Insgesamt 4 Modelle:
 	\textbf{1. Lösung}:\\
 	$\Omega = $ Menge aller 6-elementigen Teilmengen von \{1,...,49\}. \\
 	Die Kugeln werden mit einem Griff gezogen.\medskip\\
-	\#$\Omega = \binom{49}{6} \qquad \#A = \{1 \text{[die Kombination, auf die wir tippen]}\}$\\
+	\#$\Omega = \binom{49}{6} \qquad \#A = 1$ [die Kombination, auf die wir tippen]\medskip\\
 	$\mathds{P}[A] = \frac{1}{\binom{49}{6}} \approx 7,15*10^{-8}$\medskip\\
 	\textbf{2. Lösung}:\\
 	Kugeln werden einzeln gezogen, Nummern werden notiert:\\
@@ -74,10 +74,10 @@ Insgesamt 4 Modelle:
 	$\mathds{P}[A] = \frac{\#A}{\#\Omega}=\frac{6!}{49*48*...*44} = \frac{1}{\binom{49}{6}}$\medskip\\
 	\textbf{Beispiel}:\\ Wie hoch ist die Chance, dass 2 mal in Folge die gleichen Zahlen gezogen werden?\\
 	Bis zum Zeitpunkt gab es K = 3016 Ziehungen.\\
-	Insgesamt gibt es $\binom{49}{6}$ Gewinnreihen.\\
-	A = ''Bei mindestens 2 Ziehungen wurde die gleiche Reihe gezogen''\\$\approx$ Geburtstagsproblem\\
-	$A^C = $ ''Alle Ziehungen ergeben verschiedene Reihen''\\
-	$\mathds{P}[A] = 1 - \frac{n(n-1)...(n-K+1)}{n^K}$ = 0,278\\
+	Insgesamt gibt es $\binom{49}{6}$ Gewinnreihen.\medskip\\
+	A = ''Bei mindestens 2 Ziehungen wurde die gleiche Reihe gezogen''\\$\approx$ Geburtstagsproblem\medskip\\
+	$A^C = $ ''Alle Ziehungen ergeben verschiedene Reihen''\medskip\\
+	$\mathds{P}[A] = 1 - \frac{n(n-1)...(n-K+1)}{n^K}$ = 0,278\medskip\\
 	$\Rightarrow$ \textbf{Ferni-Dirar-Statistik}
 	\newpage
 	\item \textbf{Mit zurücklegen und ohne Reihenfolge}\\
