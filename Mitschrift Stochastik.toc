@@ -40,3 +40,17 @@
 \contentsline {section}{\numberline {8.2}Binomialverteilung}{42}{section.8.2}
 \contentsline {subsubsection}{\nonumberline Satz 11.1}{43}{section*.9}
 \contentsline {subsubsection}{\nonumberline Satz 11.2}{43}{section*.10}
+\contentsline {chapter}{\numberline {9}Geometrische Verteilung}{45}{chapter.9}
+\contentsline {subsubsection}{\nonumberline Satz 11.3}{45}{section*.11}
+\contentsline {subsubsection}{\nonumberline Exkurs \IeC {\"u}ber die geometrische Reihe}{46}{section*.12}
+\contentsline {subsubsection}{\nonumberline Geometrische Verteilung}{46}{section*.13}
+\contentsline {subsubsection}{\nonumberline Satz 11.4}{46}{section*.14}
+\contentsline {subsubsection}{\nonumberline Satz 11.5: Vergessenseigenschaft der Geo-Vert}{48}{section*.15}
+\contentsline {chapter}{\numberline {10}Poisson Verteilung}{49}{chapter.10}
+\contentsline {section}{\numberline {10.1}Exkurs \IeC {\"u}ber die Zahl e}{49}{section.10.1}
+\contentsline {section}{\numberline {10.2}Poisson Verteilung}{50}{section.10.2}
+\contentsline {subsection}{\numberline {10.2.1}Satz 11.6: Poisson-Grenzwertsatz}{50}{subsection.10.2.1}
+\contentsline {subsection}{\numberline {10.2.2}Satz 11.7}{52}{subsection.10.2.2}
+\contentsline {chapter}{\numberline {11}Varianz und Kovarianz}{54}{chapter.11}
+\contentsline {section}{\numberline {11.1}Satz 14.1}{54}{section.11.1}
+\contentsline {section}{\numberline {11.2}Satz 14.2}{54}{section.11.2}

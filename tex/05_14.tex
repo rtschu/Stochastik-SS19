@@ -1,0 +1,90 @@
+\chapter{Geometrische Verteilung}
+Betrachte unendl. Folge von unabh. Bernoulli-Exp. mit Erfolgswkeit p $\in(0,1]$\\
+$\Omega = \{0,1\}^\infty= \{(a_1,a_2,\dots):a_i \in \{0,1\}\}$\smallskip\\
+\begin{tabbing}
+	Zeitpunkt des ersten Erfolges: \= T : $\Omega \rightarrow\mathds{R}$\\
+	\> T$(a_1,a_2,\dots)=\text{min}\{n \in \mathds{N}:a_n = 1\}$
+\end{tabbing}
+Z.b. T($\underbrace{0}_{a_1}, \underbrace{0}_{a_2} , \underbrace{0}_{a_3}, \underbrace{0}_{a_4}, \underbrace{1}_{a_5},\dots)$ = 5\\
+Vert von T? Werte von T:1,2,3,\dots,$\infty$\medskip\\
+\subsubsection{Satz 11.3}
+$\forall k \in \{1,2,\dots\}:\mathds{P}[T=k]=p(1-p)^{k-1}$\smallskip\\
+\textbf{Definition}:T heißt geometrisch Verteilt mit Parameter p. Bez: T $\sim $Geo(p)\smallskip\\
+\textbf{Beweis}: Damit T = k ist, muss die Serie wie folgt aussehen: 
+$$\underbrace{0,0,\dots,0}_{k-1 \text{ Misserfolge}},\underbrace{1}_\text{Erfolg},\dots$$
+Sei $x_i$ das Ergebnis des i-ten Experiments.\\
+$x_i$ ist ZV mit $\mathds{P}[x_i=1]=p, \mathds{P}[x_i=0]=1-p. \quad x_1,x_2 $ sind unabh. ZV\smallskip\\
+$\mathds{P}[T=k] = \mathds{P}[x_1=0,x_2=0,\dots,x_{k-1}=0,x_n=1] $
+$\underset{x_1,\dots,x_n \text{ unabh Zv}}{=} $\\$\mathds{P}[x_i = 0]* \dots * \mathds{P}[x_{k-1}=0]*\mathds{P}[x_k=1]$\medskip\\
+$=\underbrace{(1-p)*\dots*(1-p)}_{k-1}P=p(1-p)^{k-1}\qed$\medskip\\
+\textbf{Beispiel}: Werfen eine fairen Münze bis zum ersten Mal Kopf.\\
+T=Anzahl der Würfe. $\mathds{P}[T-k] \underset{p=\frac{1}{2}}{=}\frac{1}{2}*\frac{1}{2^{k-1}}=\frac{1}{2^k},k=1,2,\dots$\medskip\\
+\textbf{Bemerkung}: $\sum_{k=1}^\infty \frac{1}{2^k}=\frac{1}{2}+\frac{1}{4}+\frac{1}{8}+\dots = 1$\smallskip\\
+\imgHere{GlasWasser}\medskip\\
+\subsubsection{Exkurs über die geometrische Reihe}
+\textbf{Aufgabe}: Berechne $1+q+q^2+q^3+\dots+q^n$\smallskip\\
+Sei A = $1+q+q^2+q^3+\dots+q^n$\\
+Betrachte: q*A = $1+q+q^2+q^3+\dots+q^n+q1 {n+1}$\smallskip\\
+Abziehen:\\
+$A-qA = 1-q^{n+1}$\\
+$A(1-q)=1-q^{n-1}$\smallskip\\
+$A \underset{q\neq 1}{=} \dfrac{1-q^{n-1}}{1-q}=\dfrac{q^{n+1}-1}{q-1} \quad \text{Für q=1}: A=n+1 \qed$\smallskip\\
+\textbf{Aufgabe}: Berechne $1+q+q^2+q^3+\dots$\\
+\textbf{Lösung}: Sei S = $1+q+^2+\dots$\medskip\\
+$S \underset{\text{def}}{=} \underset{n\rightarrow\infty}{\text{lim}}(1+q+q^2+\dots+q^n)= \underset{n\rightarrow\infty}{\text{lim}} \dfrac{q^{n+1}-1}{q-1} = \begin{cases}
+\dfrac{1}{1-q}&,\text{falls }|q|<1\\
++\infty &,\text{falls }q>1\\
+\text{exisitert nicht}&,\text{falls }q\leq -1
+\end{cases}\medskip\\$\medskip\\
+Denn $\underset{n\rightarrow\infty}{\text{lim}}q^{n+1}?\underset{n\rightarrow\infty}{\text{lim}}q^n=
+\begin{cases}
+0 &,\text{falls } |q|<1\quad (\dfrac{1}{2})^n \rightarrow 0\\
+1&,\text{falls } q = 1\\
++\infty &, \text{falls }q >1 \quad 2^n \rightarrow+\infty\\
+\text{existiert nicht}&,\text{falls }q \leq -1\quad \text{divergiert}
+\end{cases}$\smallskip\\
+Für q = 1: S = 1+1+1+\dots = $\infty$\medskip\\
+\textbf{Bemerkung}: Vorsicht mit der Reihe S=1-1+1-1+1-1+\dots Sie divergiert.
+\subsubsection{Geometrische Verteilung}
+$\sum_{k=1}^\infty \mathds{P}[T=k]=\sum_{k=1}^\infty p\underbrace{(1-p)}_q^{k-1} = p\underbrace{(1+q+q^2+\dots)}_\text{gelöst} = p*\dfrac{1}{1-q}=\dfrac{p}{p}=1$
+\subsubsection{Satz 11.4}
+Sei T $\sim$ Geo (p) \\
+$\mathds{E}T=\dfrac{1}{p}$ \\
+\textbf{Bemerkung}:\\
+$p\downarrow0 \Rightarrow \mathds{E}T \rightarrow\infty $\\
+$p=1 \Rightarrow\mathds{E}T=1$\medskip\\
+\textbf{Beweis}: \\
+$\mathds{E}T=\sum_{k=1}^\infty k*\mathds{P}[T=k]=\sum_{k=1}^\infty k*p(1-p)^{k-1}=p\sum_{k=1}^\infty k*q^{k-1}$\medskip\\
+$\sum_{k=1}^\infty kq^{k-1}=1+2q+3q^2+4q^3+5q^4+\dots$ (Entsteht durch Ableiten von $1+q+q^2+\dots = \dfrac{1}{1-q} $)\smallskip\\
+= $( 1+q+q^2+q^3+\dots)'=-\dfrac{1}{(1-q)^2}$\smallskip\\
+= $(\frac{1}{1-q})'=-1\dfrac{1}{(1-q)^2}*(1-q)'=\dfrac{1}{(1-q)^2} \quad (\frac{1}{x})' =-\frac{1}{x^2}$\medskip\\
+$\mathds{E}T = p*\dfrac{1}{(1-q)^2} = \frac{p}{p^2}=\frac{1}{p} \qed$\medskip\\
+\textbf{Beispiel}:\\
+Werfe eine faire Münze, sie zum ersten mal Kopf zeigt. Wkeit, dass die Anzahl der Würfe gerade ist.\medskip\\
+\textbf{Lösung}: $T \sim $ Geo($\frac{1}{2}$) \\
+$\mathds{P}[T\in \{2,4,6,\dots\}] = \mathds{P}[T=2]+\mathds{P}[T=4] + \dots$\smallskip\\
+$=\dfrac{1}{2^2}+\dfrac{1}{2^4}+\dfrac{1}{2^6}+\dots$\smallskip\\
+$=\dfrac{1}{1- 1/4}-1= \dfrac{4}{3}-1=\dfrac{1}{3}$\bigskip\\
+\textbf{Beispiel}: Würfeln mit einem fairen Würfel bis zu ersten 6. Erwartete Anzahl der Würfe?\medskip\\
+\textbf{Lösung}:  Erfolg = 6 \hspace{1cm} $p=\frac{1}{6} \mathds{E}T=\dfrac{1}{1/6}=6$\medskip\\
+\textbf{Beispiel Sammler-Problem}:\\
+Jede Packung enthält ein Bild. Es gibt n mögl. Bilder, alle gleichwahrscheinlich.\\
+Erwartete Anzahl an Packungen, die man kaufen muss, um alle Bilder zu sammeln. \medskip\\
+\textbf{Lösung}:\\
+\textbf{Wartezeit}: $S_n = T_1+T_2+T_3+\dots+T_n$\smallskip\\
+mit $T_1 =1, T_2 \sim \text{Geo}(\dfrac{n-1}{n}),T_3\sim \text{Geo}(\dfrac{n-2}{n}),\dots,T_n\sim \text{Geo}(\dfrac{1}{n})$\medskip\\
+Hier ist $T_i$ die Wartezeit auf ein noch nie gesehenes Bild nachdem i-1 Bilder gesammelt wurden.\smallskip\\
+$T_i \sim \text{Geo}(\dfrac{n-i+1}{n})$\smallskip\\
+\begin{tabbing}
+	$\mathds{E}S_n = \mathds{E}[T_1+\dots+T_n]$\=$ = \mathds{E}T_1+\mathds{E}T_2+\dots+\mathds{E}T_n$\\
+	\> $= \underbrace{1}_{\dfrac{n}{n}}+\dfrac{n}{n-1}+\dfrac{n}{n-2}+\dots+\dfrac{n}{1}$\\
+	\>$=n(\dfrac{1}{n}+\dfrac{1}{n-1}+\dots+1)= n(1+\dfrac{1}{2}+\dfrac{1}{3}+\dots+\dfrac{1}{n}) \qed$
+\end{tabbing}
+Für $n \rightarrow\infty \quad \dfrac{\mathds{E}S_n}{n \text{log}n}\rightarrow1$
+\subsubsection{Satz 11.5: Vergessenseigenschaft der Geo-Vert}
+$\mathds{P}[T>n+k\vert T>n]=\mathds{P}[T>k] \quad \forall n,k \in \mathds{N}, T \sim \text{Geo}(p)$\\
+$[\text{auch:}\mathds{P}[T>n+k\vert T>n]=\mathds{P}[T>k]$\medskip\\
+\textbf{Beweis}: $\mathds{P}[T>k] = \mathds{P}[\text{Versuche } 1,2,\dots,k \text{ sind Misserfolge}]=(1-p)^k$\smallskip\\
+$\mathds{P}[T>n+k\vert T>n]\underset{\text{def}}{=} \dfrac{\mathds{P}[T>n+k, T>n]}{\mathds{P}[T>n]} = \dfrac{\mathds{P}[T>n+k]}{\mathds{P[T>n]}}$\\$=\dfrac{(1-p)^{1-k}}{(1-p)^n}=(1-p)^k$
+
+
