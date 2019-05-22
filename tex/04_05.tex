@@ -21,8 +21,8 @@ Urne mit Bällen 1,...,n. Es wird k mal jeweils ein Ball zufällig gezogen. [*GR
 \end{enumerate}
 Insgesamt 4 Modelle
 \begin{enumerate}
-	\item \textbf{Ziehen mit Zurücklegen und mit Ber. der Reihenfolge}\\
-	Ausgänge dieses Exp. sind Listen der Länge K bestehend aus Zahlen zwischen 1 und n.\\
+	\item \textbf{Ziehen mit Zurücklegen und mit Berücksichtigung der Reihenfolge}\\
+	Ausgänge dieses Experiments sind Listen der Länge K bestehend aus Zahlen zwischen 1 und n.\\
 	$\Omega=\{(a_1,...,a_k):a_i \in \{1,...,n\} \forall i = 1,..,K\}$\\
 	$a_i$ = die Nummer des i-ten Ball\smallskip\\
 	\textbf{Beachte}
@@ -36,7 +36,7 @@ Insgesamt 4 Modelle
 		\item k-maliges Würfeln. 6 Bälle = 6 Seiten des Würfels\\
 	\end{itemize}
 $\#\Omega = \underbrace{n * n * ... * n}_K = n^K$
-	\item \textbf{Ziehen ohne Zurücklegen und mit Ber. der Reihenfolge}\\
+	\item \textbf{Ziehen ohne Zurücklegen und mit Berücksichtigung der Reihenfolge}\\
 	$\Omega=\{(a_1,...a_k):a_i \in \{1,...,n\},\underbrace{a_i \neq a_j\forall i\neq j}_\text{Paarweise verschiedene Elemente} \}$\smallskip\\
 	\#$\Omega = n* (n-1)*(n-2)*...*(n-K+1)$\smallskip\\
 	\textbf{Beachte}
@@ -50,7 +50,7 @@ $\#\Omega = \underbrace{n * n * ... * n}_K = n^K$
 	\item Für k = n:\\
 	\#$\Omega = n*(n-1)*...*1 = 1*2*3*...*n = n!$\\Ausgänge sind Permutationen:\\n= 3:(1,2,3),(1,3,2),(2,1,3),(2,3,1)
 \end{itemize}
-	\item \textbf{Ziehen ohne Zurücklegen und ohne Ber. der Reihenfolge}\\
+	\item \textbf{Ziehen ohne Zurücklegen und ohne Berücksichtigung der Reihenfolge}\\
 	Ausgänge: Listen der Länge K aus verschiedenen Elementen.\\
 	Allerdings wird die Reihenfolge nicht berücksichtigt, d.h. \{2,5,3\} = \{5,3,2\}\smallskip\\
 	Ausgänge sind K-elementige Teilmengen von \{1,...,n\}.\\
