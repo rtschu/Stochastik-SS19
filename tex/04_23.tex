@@ -1,17 +1,17 @@
-\section{Ungleichungen für Wkeiten}
+\section{Ungleichungen für Wahrscheinlichkeiten}
 $\mathds{P}[\Omega] = 1$\\
 $\mathds{P}[A_1\cup A_2 \cup ...] = \mathds{P}[A_1] + \mathds{P}[A_2]+ ...$\\
 falls $A_i \cap A_j = \emptyset \: \forall i+j$\medskip\\
 \textbf{7.}:\\
-$\forall  A \subset B \subset \Omega \Rightarrow \mathds{P}[A] \leq \mathds{P}[B]$\\
-\textbf{Bew.}: $B=A\cup(B\backslash A)$ (disjunkt)\\
+$\forall  A \subset B \subset \Omega \Rightarrow \mathds{P}[A] \leq \mathds{P}[B]$\medskip\\
+\textbf{Beweis}: $B=A\cup(B\backslash A)$ (disjunkt)\\
 $\mathds{P}[B]=\mathds{P}[A]+\underbrace{\mathds{P}[B\backslash A]}_{\geq 0} \geq \mathds{P}[A] \qed$\medskip\\
 \textbf{8.}:\\
 $\forall A, B \subset \Omega : \mathds{P}[A\cup B] \leq \mathds{P}[A] + \mathds{P}[B]$\medskip\\
 \textbf{Allgemeiner}: $\forall A_1,...,A_n \subset \Omega : \mathds{P}[A_1\cup ...\cup A_n] \leq \mathds{P} [A_1]+...+\mathds{P}[A_n]$\medskip\\
-\textbf{9. } Noch allgemeiner:\\
-$\forall A_1,A_2,... \subset \Omega : \mathds{P}[\bigcup_{k=1}^\infty A_k] \leq \Sigma_{k=1}^\infty \mathds{P}[A_k]$\\
-\textbf{Bew.}:\\
+\textbf{9.}: Noch allgemeiner:\\
+$\forall A_1,A_2,... \subset \Omega : \mathds{P}[\bigcup_{k=1}^\infty A_k] \leq \Sigma_{k=1}^\infty \mathds{P}[A_k]$\medskip\\
+\textbf{Beweis}:\\
 $B_1 = A_1$\\
 $B_2 = A_2\backslash A_1$\\
 $B_3 = A_3\backslash(A_1 \cup A_2)$\\
@@ -20,35 +20,39 @@ Dann gilt:\\
 $\underbrace{\bigcup_{k=1}^\infty A_k}_\text{Nicht disj.} = \underbrace{\bigcup_{k=1}^\infty B_k}_\text{disj.!!!}$\medskip\\
 $\mathds{P}[\bigcup_{k=1}^\infty A_k] = \mathds{P}[\bigcup_{k=1}^\infty B_k] \overset{\text{Axiom}}{=}\Sigma_{k=1}^\infty \mathds{P}[B_k] \underset{B_k \subset A_k}{\leq} \Sigma_{k=1}^\infty \mathds{P}[A_k] \qed$
 \chapter{Bedingte Wahrscheinlichkeiten und Unabhängigkeiten}
-\textbf{Bsp.}: 2 faire Würfel \hspace{1cm} $\Omega = \{1,...,6\}^2 \quad \#\Omega=36$\\
-A= 'Erster Würfel zeit eine 6''\hspace{1cm} B=''Augensumme = 10''\smallskip\\
+\textbf{Beispiel}: 2 faire Würfel \medskip\\
+$\Omega = \{1,...,6\}^2 \quad \#\Omega=36$\medskip\\
+Ereignis A = ''Erster Würfel zeit eine 6''\\
+Ereignis B = ''Augensumme = 10''\medskip\\
 Jemand teilt uns mit: B ist eingetreten.\smallskip\\
-$A=\{(6,1),(6,2),...,(6,6)\} \quad \#A =6 \quad \mathds{P}[A] = \frac{6}{36}= \frac{1}{6}$
+$A=\{(6,1),(6,2),...,(6,6)\} \quad \#A =6$\medskip\\
+$\mathds{P}[A] = \frac{6}{36}= \frac{1}{6}$
 $B=\{\underbrace{(6,4)}_\text{A tritt ein},(5,5),(4,6)\}$\medskip\\
 $\mathds{P}[A|B]= \frac{1}{3}$\medskip\\
 \textbf{Definition}:\\
-Seien $A,B \subset \Omega$. Bedinge Wkeit von A gegeben B ist: $$\mathds{P}[A|B] = \dfrac{\mathds{P}[A \cap B]}{\mathds{P}[B]}$$
+Seien $A,B \subset \Omega$.\medskip\\
+Die bedingte Wahrscheinlichkeit von A gegeben B ist definiert als: $$\mathds{P}[A|B] = \dfrac{\mathds{P}[A \cap B]}{\mathds{P}[B]}$$
 Annahme: $\mathds{P}[B] \neq 0$\medskip\\
-\textbf{Bsp.}:\\ Fairer Würfel wird 10x geworfen.\\
+\textbf{Beispiel}:\\ Fairer Würfel wird 10x geworfen.\\
 Uns wird mitgeteilt, dass mindestens eine 6 gewürfelt wurde.\smallskip\\
-Bedingte Wkeit, dass der erste Wurf eine 6 war = ?\medskip\\
+Bedingte Wkeit, dass der erste Wurf eine 6 war = ?\\\\
 \textbf{Lösung}:\\
-$\Omega = \{(a_1,...,a_{10}):a_i \in \{1,..,6\}\} \quad \#\Omega = \overbrace{6*6*...*6}^{10} = 6^{10}$\\
-B = ''mind. eine 6 gewürfelt'' \hspace{1cm} $B^C =$ ''keine 6 gewürfelt'' =\\
-$\{(a_1,...,a_10):a_i \in \{1,2,...,5\}\} \quad \#B^C = 5^{10}$\smallskip\\
-$\#B = 6^{10}-5^{10}$\\
-$\mathds{P}[B] = \dfrac{6^{10}-5^{10}}{6^{10}}$\smallskip\\
-A = '' der erste Wurf ist eine 6''\\
-$A = \{(6,a_2,...,a_10):a_i \in \{1,...,6\}\}$\\
-$\#A = \underbrace{1*6*6*...*g}_9 = 6^9	$\smallskip\\
+$\Omega = \{(a_1,...,a_{10}):a_i \in \{1,..,6\}\} \quad \#\Omega = \overbrace{6*6*...*6}^{10} = 6^{10}$\medskip\\
+B = ''mindestens eine 6 gewürfelt''\smallskip\\
+$B^C =$ ''keine 6 gewürfelt'' =
+$\{(a_1,...,a_10):a_i \in \{1,2,...,5\}\}$\medskip\\
+$\#B = 6^{10}-5^{10} \quad \#B^C = 5^{10}$\\\\
+$\mathds{P}[B] = \dfrac{6^{10}-5^{10}}{6^{10}}$\\\\
+A = '' der erste Wurf ist eine 6'' $= \{(6,a_2,...,a_{10}):a_i \in \{1,...,6\}\}$\medskip\\
+$\#A = 1*\underbrace{6*6*...*6}_{9-mal} = 6^9	$\smallskip\\
 $\mathds{P}[A] = \dfrac{6^9}{6^{10}}= \dfrac{1}{6}$\medskip\\
-$A\cap B = A$\\
+$A\cap B = A$\smallskip\\
 $\mathds{P}[A\cap B] = \mathds{P}[A]=\frac{1}{6}$\smallskip\\
 $\mathds{P}[A  \vert B ] = \dfrac{\mathds{P}[A \cap B]}{\mathds{P}[B]} = \dfrac{6^9}{6^{10}-5^{10}} = 0,19$\medskip\\
-$\mathds{P}[A\vert B] = 0,19$\\
+$\mathds{P}[A\vert B] = 0,19$\smallskip\\
 $\mathds{P}[A] = 0,16$\medskip\\
 \textbf{Alternativ}: $\mathds{P}[A\vert B] = \dfrac{\#(A\cap B)}{\#B}$
-\section{Eigenschaften der bedingten Wkeiten}
+\section{Eigenschaften der bedingten Wahrscheinlichkeiten}
 \begin{enumerate}
 	\item $\mathds{P}[A \vert B] = \dfrac{\mathds{P}[A \cap B]}{\mathds{P}[B]} \leq 1 $ (und $\geq 0$)
 	\item $\mathds{P}[\Omega\vert B] = \dfrac{\mathds{P}[\Omega \cap B]}{\mathds{P}[B]}= \dfrac{\mathds{P}[B]}{\mathds{P}[B]} = 1$
@@ -58,15 +62,17 @@ $\mathds{P}[A] = 0,16$\medskip\\
 	$$= \dfrac{\mathds{P}\left[\bigcup_{k=1}^\infty(A_k \cap B)\right]}{\mathds{P}[B]}$$
 	$$\overset{A_\cap B ,A_2 \cap B,... \text{disj}}{=} \dfrac{\Sigma_{k=1}^\infty \mathds{P}[A_k \cap B]}{\mathds{P}[B]} = \Sigma_{k=1}^\infty \dfrac{\mathds{P}[A_k \cap B]}{\mathds{P}[B]} = \Sigma_{k=1}^\infty \mathds{P}[A_k \vert B] \qed$$
 	\item $\mathds{P}[A^C\vert B] = 1 - \mathds{P}[A\vert B]$
-	\item Multiplikationsregel:\\$\mathds{P}[A_1\cap A_2] = \mathds{P}[A_1]*\mathds{P}[A_2\vert A_1]$\smallskip\\
-	$\mathds{P}[A_1\cap A_2\cap A_3] = \mathds{P}[A_1] * \mathds{P}[A_2 \vert A_1]* \mathds{P}[A_3 \vert (A_1 \cap A_2)]$\smallskip\\
-	\textbf{Sterbewahrscheinlichkeiten $q_0,q_1,...$}\\
+	\item Multiplikationsregel:\medskip\\$\mathds{P}[A_1\cap A_2] = \mathds{P}[A_1]*\mathds{P}[A_2\vert A_1]$\smallskip\\
+	$\mathds{P}[A_1\cap A_2\cap A_3] = \mathds{P}[A_1] * \mathds{P}[A_2 \vert A_1]* \mathds{P}[A_3 \vert (A_1 \cap A_2)]$\\\\\\\\
+	\textbf{Beispiel:}\\
+	Sterbewahrscheinlichkeiten $q_0,q_1,...$\\
 	$q_n = $ Wahrscheinlichkeit, als eine n-jährige Person, dass Alter n+1 nicht zu erreichen.\smallskip\\
 	$q_0 = 0,0046$ \hspace{2cm} Wkeit, dass eine Person $\geq$ 50 alt wird\\
 	$q_1 = 0,0004$\\
 	$q_2 = 0,0002$\smallskip\\
-	\textbf{Lösung}: Def.: $A_n$=''Person hat das Alter von n Jahren erreicht''\\$\mathds{P}[A_{50}] = ?$\medskip\\
-	Gegeben sind $q_n = \mathds{P}\left[A_{n+1}^C \vert A_n\right]\quad 1-q_n = \mathds{P}[A_{n+1}\vert A_n]$\\
+	\textbf{Lösung}:\smallskip\\
+	$A_n$ := ''Person hat das Alter von n Jahren erreicht''\smallskip\\$\mathds{P}[A_{50}] = ?$\medskip\\
+	Gegeben sind $q_n = \mathds{P}\left[A_{n+1}^C \vert A_n\right]\quad 1-q_n = \mathds{P}[A_{n+1}\vert A_n]$\smallskip\\
 	$\mathds{P}[A_{50}] = \mathds{P}[A_1]*\mathds{P}[A_2 \vert A_1]*\mathds{P}[A_3\vert (A_1 \cap A_2)]*\mathds{P}[A_4 \vert \underbrace{(A_1 \cap A_2 \cap A_3)}_{A_3}] * ... * \mathds{P}[A_{50}\vert \underbrace{(A_1\cap...\cap A_{49})}_{A_{49}}] $\\ $=(1-q_0)*(1-q_1)*...*(1-q_{49})$\medskip\\
 	$\mathds{P}[\text{Person lebt genau 50 Jahre}] =(1-q_0)*(1-q_1)*...*(1-q_{49}) * q_{50}$\qed
 \end{enumerate}

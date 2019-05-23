@@ -1,42 +1,42 @@
 \chapter{Kombinatorik}
-\textbf{Bsp.} Geburtstagsproblem \hspace{1.5cm} K = 200 Personen\\
-A = ''mind. 2 Personen haben am gleichen Tag Geburtstag''\\
-$\mathds{P}[A] = ?$\medskip\\
-\textbf{Modell}: n = 365 Tage im Jahr\\
+\textbf{Beispiel}: Geburtstagsproblem \hspace{1.5cm} K = 200 Personen\\
+A = ''mindestens 2 Personen haben am gleichen Tag Geburtstag''\\
+$\mathds{P}[A] = ?$\\\\
+\textbf{Modell}: n = 365 Tage im Jahr\\\\
 \textbf{Ausgänge}: Liste der Länge K besteht aus Zahlen zwischen 1 und n\medskip\\
 $\Omega = \{1,...,n\}^K=\{(a_1,...,a_k):a_i \in \{1,...,365\}\forall i = 1,...,k\}$\smallskip\\
 $a_i = $ Geburtstag der i-ten Person.\\
-\#$\Omega =\underbrace{n*n*...*n}_K = n^K = 365^{200}$
-A = ''mind...'' \hspace{1.5cm} $\mathds{P} = \frac{\#A}{\#\Omega}$\smallskip\\
-Gegenereignis $A^C$ = ''alle Geburtstage sind (paarweise) verschieden''\\
-$\#A^C = \underbrace{n}_{\text{Mögl. für Person 1}}*\underbrace{(n-1)}_{\text{Mögl. für Person 2}}*\underbrace{(n-2)}_\text{Mögl. für 3. Person} * ... * \underbrace{(n-K+1)}_\text{Mögl. für K-te Person} = (n)_K$\\K$ \leq  $n\medskip\\
+\#$\Omega =\underbrace{n*n*...*n}_K = n^K = 365^{200}$\\
+$\mathds{P}[A] = \frac{\#A}{\#\Omega}$\smallskip\\
+Gegenereignis $A^C$ = ''alle Geburtstage sind (paarweise) verschieden''\\\\
+$\#A^C = \underbrace{n}_{\text{Mögl. für Person 1}}*\underbrace{(n-1)}_{\text{Mögl. für Person 2}}*\underbrace{(n-2)}_\text{Mögl. für 3. Person} * ... * \underbrace{(n-K+1)}_\text{Mögl. für Person k} = (n)_K$ mit K$ \leq  $n\medskip\\
 $\mathds{P}[A] = \frac{\#A}{\#\Omega} = \frac{\#\Omega-\#A^C}{\#\Omega}=1-\frac{\#A^C}{\#\Omega}=1-\frac{n(n-1)...(n-K+1)}{n^K}$\medskip\\
-\textbf{Bsp.}:\\ K = 23 Personen: $\mathds{P}[A]=$0.507\\K = 200: $\mathds{P}[A]=0.999999...8 \approx 1$\newpage
+\textbf{Beispiel}:\\ K = 23 Personen: $\mathds{P}[A]=$0.507\\K = 200: $\mathds{P}[A]=0.999999...8 \approx 1$\newpage
 \section{Urnenmodelle}
 Urne mit Bällen 1,...,n. Es wird k mal jeweils ein Ball zufällig gezogen. [*GRAFIK URNE]\\
 \textbf{Möglichkeiten}:
 \begin{enumerate}
-	\item[a)] Mit/Ohne Zurücklegen
+	\item[a)] Mit/ohne Zurücklegen
 	\item[b)] Nummern der Bälle mit/ohne Berücksichtigung der Reihenfolge
 \end{enumerate}
-Insgesamt 4 Modelle
+Insgesamt 4 Modelle:
 \begin{enumerate}
-	\item \textbf{Ziehen mit Zurücklegen und mit Ber. der Reihenfolge}\\
-	Ausgänge dieses Exp. sind Listen der Länge K bestehend aus Zahlen zwischen 1 und n.\\
+	\item \textbf{Mit Zurücklegen und mit Berücksichtigung der Reihenfolge}\\
+	Ausgänge dieses Experiments sind Listen der Länge K bestehend aus Zahlen zwischen 1 und n.\\
 	$\Omega=\{(a_1,...,a_k):a_i \in \{1,...,n\} \forall i = 1,..,K\}$\\
 	$a_i$ = die Nummer des i-ten Ball\smallskip\\
 	\textbf{Beachte}
-\begin{itemize}
-	\item 	Es ist möglich, dass $a_i = a_j$ (mit Zurücklegen)
-	\item 	$(5,3,7,...) \neq (3,5,7,...)$
-\end{itemize}
-	\textbf{Bsp}:
+	\begin{itemize}
+		\item 	Es ist möglich, dass $a_i = a_j$ (mit Zurücklegen)
+		\item 	$(5,3,7,...) \neq (3,5,7,...)$
+	\end{itemize}
+	\textbf{Beispiel}:
 	\begin{itemize}
 		\item Geburtstage von Personen. Bälle = Tage. \\Jede Person zieht einen Ball zufällig.
 		\item k-maliges Würfeln. 6 Bälle = 6 Seiten des Würfels\\
 	\end{itemize}
-$\#\Omega = \underbrace{n * n * ... * n}_K = n^K$
-	\item \textbf{Ziehen ohne Zurücklegen und mit Ber. der Reihenfolge}\\
+	$\#\Omega = \underbrace{n * n * ... * n}_K = n^K$
+	\item \textbf{Ohne Zurücklegen und mit Berücksichtigung der Reihenfolge}\\
 	$\Omega=\{(a_1,...a_k):a_i \in \{1,...,n\},\underbrace{a_i \neq a_j\forall i\neq j}_\text{Paarweise verschiedene Elemente} \}$\smallskip\\
 	\#$\Omega = n* (n-1)*(n-2)*...*(n-K+1)$\smallskip\\
 	\textbf{Beachte}
@@ -44,52 +44,53 @@ $\#\Omega = \underbrace{n * n * ... * n}_K = n^K$
 		\item (1,3,\textbf{2},4,5,\textbf{2},...) $\notin \Omega$
 		\item (5,3,7,...) $\neq$ (3,5,7,...)
 	\end{itemize}
-\textbf{Bemerkungen}: 
-\begin{itemize}
-	\item Falls k $>$ n: \#$\Omega = 0$
-	\item Für k = n:\\
-	\#$\Omega = n*(n-1)*...*1 = 1*2*3*...*n = n!$\\Ausgänge sind Permutationen:\\n= 3:(1,2,3),(1,3,2),(2,1,3),(2,3,1)
-\end{itemize}
-	\item \textbf{Ziehen ohne Zurücklegen und ohne Ber. der Reihenfolge}\\
+	\textbf{Bemerkungen}: 
+	\begin{itemize}
+		\item Falls k $>$ n: \#$\Omega = 0$
+		\item Für k = n:\\
+		\#$\Omega = n*(n-1)*...*1 = 1*2*3*...*n = n!$\\Ausgänge sind Permutationen:\\n= 3:(1,2,3),(1,3,2),(2,1,3),(2,3,1)
+	\end{itemize}
+	\item \textbf{Ohne Zurücklegen und ohne Berücksichtigung der Reihenfolge}\\
 	Ausgänge: Listen der Länge K aus verschiedenen Elementen.\\
 	Allerdings wird die Reihenfolge nicht berücksichtigt, d.h. \{2,5,3\} = \{5,3,2\}\smallskip\\
-	Ausgänge sind K-elementige Teilmengen von \{1,...,n\}.\\
+	Ausgänge sind K-elementige Teilmengen von \{1,...,n\}.\medskip\\
 	$\Omega = \{A:A\subset\{1,...,n\},|A| = k\}$ oder \\
 	$\Omega = \{(a_1,...,a_k):a_i \in \{1,...,n\},\underbrace{a_1<a_2<...<a_k}_{\substack{\text{Reihenfolge wird}\\\text{ durch sortieren gelöscht}}} \}$\medskip\\
 	\#$\Omega = \frac{n*(n-1)*...*(n*K+1)}{K!}$ \hspace{0.5cm}K Objekte aus n Objekten auswählen\smallskip\\
-	 $ = \binom{n}{k}$\medskip\\
-	 \textbf{Bsp.}: Lotto, 49 Kugeln. 6 Kugeln werden ohne Zurücklegen gezogen.\\ 
-	 Wir tippen auf eine Kombination aus 6 Nummern\smallskip\\
-	 A = ''Man hat alle 6 geraten'' $\mathds{P}[A] = \frac{1}{\binom{49}{6}}$\medskip\\
-	 \textbf{1. Lösung}:\\
-	 $\Omega = $ Menge aller 6-elem. Teilmengen von \{1,...,49\}. \\
-	 Die Kugeln werden mit einem Griff gezogen.\medskip\\
-	 \#$\Omega = \binom{49}{6} \qquad \#A = \{1 \text{[die Kombination, auf die wir tippen]}\}$\\
-	 $\mathds{P}[A] = \frac{1}{\binom{49}{6}} \approx 7,15*10^{-8}$\medskip\\
-	 \textbf{2. Lösung}:\\
-	 Kugeln werden einzeln gezogen, Nummern werden notiert:\\
-	 $\Omega = \{(a_1,...,a_6):a_i \in \{1,...,49\},a_i \neq a_i \forall i \neq j\}$\smallskip\\
-	 \#$\Omega = 49*48*47*...*(49-6+1) \qquad \#A = 6! $\medskip\\
-	 Wir tippen auf \{1,...,6\}. wir gewinnen bei allen Permutationen von 1,...,6.\\
-	 $\mathds{P}[A] = \frac{\#A}{\#\Omega}=\frac{6!}{49*48*...*44} = \frac{1}{\binom{49}{6}}$\medskip\\
-	 \textbf{Bsp.}:\\ Wie hoch ist die Chance, dass 2 mal in Folge die gleichen Zahlen gezogen werden?\\
-	 Bis zum Zeitpunkt gab es K = 3016 Ziehungen.\\
-	 Insgesamt gibt es $\binom{49}{6}$ Gewinnreihen.\\
-	 A = ''Bei mind. 2 Ziehungen wurde die gleiche Reihe gezogen''\\$\approx$ Geburtstagsproblem\\
-	 $A^C = $ ''Alle Ziehungen ergeben versch. Reihen''\\
-	 $\mathds{P}[A] = 1 - \frac{n(n-1)...(n-K+1)}{n^K}$ = 0,278\\
-	 $\Rightarrow$\textbf{Ferni-Dirar-Statistik}
-	\item \textbf{Ziehen mit zurücklegen und ohne Reihenfolge}\\
+	$ = \binom{n}{k}$\medskip\\
+	\textbf{Beispiel}: Lotto, 49 Kugeln. 6 Kugeln werden ohne Zurücklegen gezogen.\\ 
+	Wir tippen auf eine Kombination aus 6 Nummern\smallskip\\
+	A = ''Man hat alle 6 geraten'' $\mathds{P}[A] = \frac{1}{\binom{49}{6}}$\medskip\\
+	\textbf{1. Lösung}:\\
+	$\Omega = $ Menge aller 6-elementigen Teilmengen von \{1,...,49\}. \\
+	Die Kugeln werden mit einem Griff gezogen.\medskip\\
+	\#$\Omega = \binom{49}{6} \qquad \#A = 1$ [die Kombination, auf die wir tippen]\medskip\\
+	$\mathds{P}[A] = \frac{1}{\binom{49}{6}} \approx 7,15*10^{-8}$\medskip\\
+	\textbf{2. Lösung}:\\
+	Kugeln werden einzeln gezogen, Nummern werden notiert:\\
+	$\Omega = \{(a_1,...,a_6):a_i \in \{1,...,49\},a_i \neq a_i \forall i \neq j\}$\smallskip\\
+	\#$\Omega = 49*48*47*...*(49-6+1) \qquad \#A = 6! $\medskip\\
+	Wir tippen auf \{1,...,6\}. wir gewinnen bei allen Permutationen von 1,...,6.\\
+	$\mathds{P}[A] = \frac{\#A}{\#\Omega}=\frac{6!}{49*48*...*44} = \frac{1}{\binom{49}{6}}$\medskip\\
+	\textbf{Beispiel}:\\ Wie hoch ist die Chance, dass 2 mal in Folge die gleichen Zahlen gezogen werden?\\
+	Bis zum Zeitpunkt gab es K = 3016 Ziehungen.\\
+	Insgesamt gibt es $\binom{49}{6}$ Gewinnreihen.\medskip\\
+	A = ''Bei mindestens 2 Ziehungen wurde die gleiche Reihe gezogen''\\$\approx$ Geburtstagsproblem\medskip\\
+	$A^C = $ ''Alle Ziehungen ergeben verschiedene Reihen''\medskip\\
+	$\mathds{P}[A] = 1 - \frac{n(n-1)...(n-K+1)}{n^K}$ = 0,278\medskip\\
+	$\Rightarrow$ \textbf{Ferni-Dirar-Statistik}
+	\newpage
+	\item \textbf{Mit zurücklegen und ohne Reihenfolge}\\
 	K Vögel setzen sich auf n Bäume
-\begin{itemize}
-	\item 	Mehrfachbesetzungen möglich
-	\item 	Vögel identisch
-\end{itemize}
-\textbf{Wieviele Besetzungen sind möglich?}\medskip\\
-\textbf{Lösung}:\\
-Insgesamt $\underbrace{K}_\text{Vögel}+\underbrace{n-1}_\text{''Trennwände''}$ Symbole, davon K Kreuze\medskip\\
-\#$\Omega = \binom{K+n-1}{K} = \binom{K+n-1}{n-1} $\medskip\\
-$\binom{a}{b} = \binom{a}{a-b}$\smallskip\\
-$\Rightarrow$ Bose-Einstein-Statistik, für VL unwichtig
+	\begin{itemize}
+		\item 	Mehrfachbesetzungen möglich
+		\item 	Vögel identisch
+	\end{itemize}
+	\textbf{Wieviele Besetzungen sind möglich?}\medskip\\
+	\textbf{Lösung}:\\
+	Insgesamt $\underbrace{K}_\text{Vögel}+\underbrace{n-1}_\text{''Trennwände''}$ Symbole, davon K Kreuze\medskip\\
+	\#$\Omega = \binom{K+n-1}{K} = \binom{K+n-1}{n-1} $\medskip\\
+	$\binom{a}{b} = \binom{a}{a-b}$\smallskip\\
+	$\Rightarrow$ Bose-Einstein-Statistik (für diese Vorlesung unwichtig)
 \end{enumerate}
 
