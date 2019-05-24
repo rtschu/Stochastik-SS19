@@ -1,0 +1,122 @@
+\section{Satz 14.3}
+Für anabh. ZV x,y gilt:
+$$\text{Var}[x+y] = \text{Var }x+\text{Var }y$$
+\textbf{Beweis}:\\
+Definition: x' := x-$ \mathds{E} $x\hspace{1cm}$\mathds{E}x'=\mathds{E}[x-\mathds{E}x] = \mathds{E}x-\mathds{E}x=0$\medskip\\
+y':= y-$\mathds{E}$y \hspace{1cm} $\mathds{E}y'=0$\medskip\\
+Var$[x+y] \overset{\text{def}}{=} \mathds{E}[(x+y-\mathds{E}[x+y])^2] = \mathds{E}[(x'+y')^2]$\smallskip\\
+$=\mathds{E}[x'^2+y'^2+2x'y'] = \mathds{E}[x'^2] + \mathds{E}[y'^2]+2\mathds{E}[x'y']$\medskip\\
+denn $\mathds{E}[\underbrace{x'y'}_\text{unabh.}]=\mathds{E}[x']*\mathds{E}[y']=0*0\qed$\medskip\\
+\textbf{Bemerkung}: Für n unabh. ZV $x_1,\dots,x_n$ gilt Var$[x_1+\dots,x_n] = $ Var $x_1+\dots + $Var $x_n$\medskip\\
+\textbf{Beispiel}: Sei $x \sim $ Bin(n,p) \hspace{1cm} Var x=?\smallskip\\
+\textbf{Lösung}: $ x=x_1+\dots+x_n$,  wobei $x_i=\begin{cases}
+1&,\text{falls das i-te Exp. Erfolg ist}\\
+0&,\text{sonst}
+\end{cases}$\smallskip\\
+$x_1,\dots,x_n$ sind unabh\\
+$x_i \sim \text{Bern}(p)$, d.h. $\PP[x_i = 1]=p, \PP[x_i=0]=1-p$\\
+$\E x_i=p$\\
+$\var x_i = \E[\underbrace{x_i^2}_{x_i}]-(\E[x_i])^2$\\ = $\E x_i - (\E x_i)^2=p-p^2 = p(1-p)$\medskip\\
+denn $x_i \in \{0,1\}, x_i^2=x_i$\medskip\\
+\textbf{Also}: Für $x \sim \text{Bin}(n,p) gilt \E x = np, \var x = np(1-p)$\newpage
+\textbf{Bemerkung}:
+\begin{itemize}
+	\item  p = 0 $\Rightarrow x=0 \Rightarrow \var x = 0$
+	\item p=1 $\Rightarrow x=n \Rightarrow \var x = 0$
+	\item Var x $\rightarrow$ max, wenn $p=\frac{1}{2}$
+\end{itemize}
+\textbf{Beispiel}: n Würfe mit einem fairen Würfel. S= Augensumme\\
+Var S =?\smallskip\\
+\textbf{Lösung}:\\
+S=$x_1+\dots,x_n$, wobei $x_i$ die Augenzahl im i-ten Wurf ist.\\ $x_1,\dots,x_n$ sind unabh. ZV.\smallskip\\
+$x_i$ ist uniform verteilt auf \{1,\dots,6\}\smallskip\\
+$\E x_i = 3,5 \quad \mathds{E}S=n*3,5$\smallskip\\
+Var $x_i = \dfrac{6^2-1}{12}=\dfrac{35}{12} \quad \var S = \var x_1 + \dots + \var x_n = n*\dfrac{35}{12}$
+\section{Schwaches Gesetz der großen Zahlen}
+Seien $x_i,x_2,\dots$ unabh. identisch verteilte ZV (alle $x_i$ haben die gleiche Verteilung) mit $\E x_i = \mu, \E[x_i^2] < \infty$\medskip\\
+Sei $S_n = x_1 + \dots + x_n$\smallskip\\
+Dann gilt $\forall \varepsilon > 0:\limntoinf \PP \left[\vert \dfrac{S_n}{n}-\mu \vert > \varepsilon \right] = 0$\medskip\\
+$\vert \dfrac{S_n}{n}\vert > \varepsilon \Leftrightarrow \vert s_n - n\mu \vert > n \varepsilon \Leftrightarrow S_n \notin [n\mu -n\varepsilon,n\mu + n\varepsilon]$\medskip\\
+\textbf{Bemerkung}:\\
+$\forall \varepsilon > 0: \limntoinf \PP \left[s_n \notin [n(\mu-\varepsilon),n(\mu + \varepsilon)]\right] = 0$\medskip\\
+Gegenereignis:\\
+$\forall \varepsilon >0 \limntoinf \PP[S_n \in [n(\mu - \varepsilon),n(\mu + \varepsilon)]] = 1$\medskip\\
+\textbf{Beispiel}: Faire Münze n-mal werfen. $S_n = x_1 + \dots + x_n$ = Anzahl von Kopf\smallskip\\
+$x_i \sim \text{Bern}(\frac{1}{2}), \quad\mu = \E x_i = \frac{1}{2}$\smallskip\\
+$\forall \varepsilon > 0 : \limntoinf \PP \left[(\frac{1}{2}-\varepsilon)n \leq S_n \leq (\frac{1}{2}+\varepsilon)\right] = 1$\medskip\\
+\textbf{Z.B.}:$ \varepsilon = 0,01: \limntoinf \PP \left[0,49n\leq S_n\leq 0,51n\right]=1$\smallskip\\
+\imgHere{SCHWACHES GESETZT N=1000}\smallskip\\
+\textbf{Beispiel}: Werfen eines fairen Würfels. $S_n$ = Augensumme\smallskip\\
+$\limntoinf\PP\left[3,49 n \leq S_n \leq 3,51n\right]$\medskip\\
+\subsection{GGZ - Kurzfassung}
+$x_1,x_2,\dots$ unabh. id. vert.\smallskip\\
+$\mathds{E}x_i = \mu $\\
+$S_n = \xn$\smallskip\\
+Dann gilt $ \forall \varepsilon > 0: $\smallskip
+$\limntoinf \PP \left[\vert \dfrac{S_n}{n}-\mu\vert > \varepsilon\right] = 0$\smallskip\\
+$\dfrac{S_n}{n}$ konvergiert gegen $\mu$ stochastisch\medskip\\
+Vorbereitung zum Beweis des GGZ
+\section{Satz 11.4: Markov-Ungleichung}
+Sei $x\geq 0$ ZV. Dann gilt für $\forall a > 0$:\smallskip\\
+$$\PP[x \geq a ] \leq \dfrac{\E x}{a}$$
+\textbf{Beweis}:\\
+Es gilt: $x \geq a*\mathds{1}_{\{x\geq a\}}$ (*)\smallskip\\
+\imgHere{GGZ KURVEN}\medskip\\
+\textbf{Beweis von (*)}:\\
+Fall 1: $x \geq a \Rightarrow \text{Linke Seite} \geq a, \text{RS} = a \checkmark$\medskip\\
+Fall 2: $x < a \Rightarrow \text{LS} \geq 0, \text{RS} = 0 \checkmark$\medskip\\
+Wende auf (*) den $\E$ an:\\
+$\E x \geq \E \left[a\mathds{1}_{\{x \geq a\}}\right] = a \E \mathds{1}_{\{x\geq a\}} = a\PP [x \geq a]$\smallskip\\
+Teile durch a \qed
+\section{Satz 14.5 Chebyshev-Ungl}
+Sei X ZV. Dann gilt $\forall a > 0$:
+$$\PP\left[\vert x - \E x\vert \geq a \right] \leq \dfrac{\var x}{a^2}$$
+\textbf{Beweis}: \\
+$\PP \left[\vert x-\E x\vert \geq a\right] = \PP \left[\vert x-\E x\vert^2 \geq a^2\right] $\smallskip\\
+$\PP\left[(\underbrace{x-\E x}_{y\geq 0} )^2\geq a^2\right] \underset{\text{Markov-ungl für y}}{\leq}\dfrac{\E y}{a 2}=\dfrac{\var x}{a^2}$\medskip\\
+\subsection{Beweis des GGZ}
+$S_n = \xn$\smallskip\\
+\begin{math}
+\E \left[\dfrac{\xn}{n}\right] = \dfrac{\E x_1 + \dots \E x_n}{n} = \mu \smallskip\\
+\var\left[\dfrac{\xn}{n}\right]= \dfrac{\var\left[\xn\right]}{n^2} \underset{\text{unabh}}{=} \dfrac{\var\: x_1 + \dots + \var\: x_n}{n^2} =\smallskip\\ \frac{1}{n}\var\: x_1 \ntoinf 0\bigskip\\
+\PP\left[\vert\dfrac{S_n}{n}-\mu \vert \geq \varepsilon\right] = \PP\left[\vert Z_n - \E Z_n \vert \geq \varepsilon\right] \underset{\text{Chebyshev}}{\leq} \dfrac{\var\: Z_n}{\varepsilon^2}=\dfrac{\frac{1}{n}\var\: x_1}{\varepsilon^2} \smallskip\\
+= \underbrace{\dfrac{\var\: x_1}{\varepsilon^2}}_\text{const} * \underbrace{\dfrac{1}{n}}_0 \ntoinf 0 
+\end{math}\qed
+\section{Kovarianz}
+\textbf{Definition}:\\
+Seien x,y ZV.\smallskip\\
+Kovarianz von x und y ist Cov(x,y) = $\E \left[(x-\E x)(y-\E y)\right]$\medskip\\
+\textbf{Beispiel}: \cov(x,x) = Var x $\geq 0$\smallskip\\
+\subsection{Satz 14.6}
+\begin{math}
+\cov(x,y)=\E\left[xy\right]-(\E x)*(\E y)\smallskip\\
+\text{\textbf{Beweis}:} \cov(x,y)=\E \left[(x-\E x)(y-\E y)\right]\smallskip\\
+= \E \left[xy-(\E x)y-x\E y + \E x * \E y\right]\smallskip\\
+= \E [xy] - \E [\underbrace{(\E x)}_\text{const}*y]-\E[x*\underbrace{\E y}_\text{const}]+\E[\underbrace{\E x}_\text{const} * \underbrace{\E y}_\text{const} ]\smallskip\\
+= \E[xy] - \E x * \E y - \E y * \E x + \E x * \E y\smallskip\\
+= \E[xy] -\E[x]\E[y]
+\end{math}\qed\smallskip\\
+\subsection{Satz 14.7}
+x,y sind unabh $ \Rightarrow $ Cov(x,y) = 0\smallskip\\
+\textbf{Beweis}: x,y unabh $\Rightarrow$\smallskip\\
+Cov(x,y) = $\E[xy]-(\E x)(\E y) = \E x * \E y - \E x * \E y = 0$\qed\medskip\\
+\textbf{Bemerkung}: $\Leftarrow $ gilt nicht:\\
+\textbf{Beispiel}: von ZV, die unkorreliert abhängig sind. Seien x,y ZV mit $\PP[x=1y=0]=\frac{1}{4}$\smallskip\\
+$\PP[x=-1, y=0]=\frac{1}{4}$\smallskip\\
+$\PP[x=0, y=1]=\frac{1}{4}$\smallskip\\
+$\PP[x=0, y=-1]=\frac{1}{4}$\smallskip\\
+\begin{enumerate}
+	\item Beh. x,y sind abh.\\
+	$\PP[x=1]=\frac{1}{4}=\PP[x=-1]$\smallskip\\
+	$\PP[x=0] = \frac{1}{4}+\frac{1}{4}=\frac{1}{2}$\smallskip\\
+	$\PP[y=1] = \frac{1}{4} = \PP[y=-1]$\smallskip\\
+	$\PP[y=0] = \frac{1}{2}$\smallskip
+	$\PP[x=1,y=0] = \frac{1}{4}$\smallskip\\
+	$\PP[x=1]*\PP[y=0] = \frac{1}{4}*\frac{1}{2} \neq \frac{1}{4}$\medskip\\
+	$\Rightarrow$ x,y abh
+	\item \textbf{Behauptung}: Cov(x,y) = 0\smallskip\\
+	$\E x = 1 * \frac{1}{4}+(-1)*\frac{1}{4}+0*\frac{1}{2}=0$\smallskip\\
+	$\E y = 0$\smallskip\\
+	$\E[xy] = 0$, denn x,y ist immer 0 \medskip\\
+	Cor(x,y) = $\E[xy]-\E x * \E y = 0$
+	\end{enumerate}
