@@ -52,6 +52,7 @@ $\mathds{E}[X(X-1)] = \sum_{k=0}^\infty k(k-1)\mathds{P}[x=k] = \sum_{k=0}^\inft
 $=\sum_{k=2}^\infty k(k-1)e^{-\lambda}\dfrac{\lambda^k}{1*2*\dots*(k-1)k}=e^{-\lambda}* \sum_{k=2}^\infty\dfrac{\lambda^k}{(k-1)!}$\smallskip\\
 \begin{math}
 =e^{-\lambda}*\lambda^2*\sum_{k=2}^\infty \dfrac{\lambda^{k-2}}{(k-2)!}\smallskip\\
-=e^{-\lambda} \lambda^2 * \sum_{l=0}^{\infty}\dfrac{\lambda^l}{l!}=e^{-\lambda}\lambda^2e^\lambda \medskip\\
-\text{HIER FEHLT DEFINITIV NICHTS}
+=e^{-\lambda} \lambda^2 * + \E x = \lambda ^2+\lambda\smallskip\\
+\var\:x = \E[x^2]-(\E x)^2 = \lambda^2+\lambda-\lambda^2=\lambda \qed \sum_{l=0}^{\infty}\dfrac{\lambda^l}{l!}=e^{-\lambda}\lambda^2e^\lambda = \lambda^2 \medskip\\
+\E[x^2]=\E[\lambda (x-1)]
 \end{math}

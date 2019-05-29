@@ -18,7 +18,7 @@ $x_i \sim \text{Bern}(p)$, d.h. $\PP[x_i = 1]=p, \PP[x_i=0]=1-p$\\
 $\E x_i=p$\\
 $\var x_i = \E[\underbrace{x_i^2}_{x_i}]-(\E[x_i])^2$\\ = $\E x_i - (\E x_i)^2=p-p^2 = p(1-p)$\medskip\\
 denn $x_i \in \{0,1\}, x_i^2=x_i$\medskip\\
-\textbf{Also}: Für $x \sim \text{Bin}(n,p) gilt \E x = np, \var x = np(1-p)$\newpage
+\textbf{Also}: Für $x \sim \text{Bin}(n,p) \text{ gilt } \E x = np, \var x = np(1-p)$\newpage
 \textbf{Bemerkung}:
 \begin{itemize}
 	\item  p = 0 $\Rightarrow x=0 \Rightarrow \var x = 0$
@@ -101,7 +101,7 @@ x,y sind unabh $ \Rightarrow $ Cov(x,y) = 0\smallskip\\
 \textbf{Beweis}: x,y unabh $\Rightarrow$\smallskip\\
 Cov(x,y) = $\E[xy]-(\E x)(\E y) = \E x * \E y - \E x * \E y = 0$\qed\medskip\\
 \textbf{Bemerkung}: $\Leftarrow $ gilt nicht:\\
-\textbf{Beispiel}: von ZV, die unkorreliert abhängig sind. Seien x,y ZV mit $\PP[x=1y=0]=\frac{1}{4}$\smallskip\\
+\textbf{Beispiel}: von ZV, die unkorreliert abhängig sind. Seien x,y ZV mit\smallskip\\ $\PP[x=1, y=0]=\frac{1}{4}$\smallskip\\
 $\PP[x=-1, y=0]=\frac{1}{4}$\smallskip\\
 $\PP[x=0, y=1]=\frac{1}{4}$\smallskip\\
 $\PP[x=0, y=-1]=\frac{1}{4}$\smallskip\\
@@ -120,3 +120,6 @@ $\PP[x=0, y=-1]=\frac{1}{4}$\smallskip\\
 	$\E[xy] = 0$, denn x,y ist immer 0 \medskip\\
 	Cor(x,y) = $\E[xy]-\E x * \E y = 0$
 	\end{enumerate}
+\textbf{Bemerkung}:\\\begin{math}
+\exists[xy]=\sum_{a,b}ab\PP[x=a,y=b]\smallskip\\
+\end{math}

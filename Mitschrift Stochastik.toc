@@ -63,3 +63,11 @@
 \contentsline {section}{\numberline {11.7}Kovarianz}{60}{section.11.7}
 \contentsline {subsection}{\numberline {11.7.1}Satz 14.6}{60}{subsection.11.7.1}
 \contentsline {subsection}{\numberline {11.7.2}Satz 14.7}{60}{subsection.11.7.2}
+\contentsline {section}{\numberline {11.8}Satz 14.8}{61}{section.11.8}
+\contentsline {section}{\numberline {11.9}Dimensionsloses Ma\IeC {\ss } f\IeC {\"u}r Zusammenhang zwischen zwei ZV x, y}{62}{section.11.9}
+\contentsline {subsection}{\numberline {11.9.1}Exkurs \IeC {\"u}ber die Cauchy-Schwarz-Ungleichung}{62}{subsection.11.9.1}
+\contentsline {subsection}{\numberline {11.9.2}Satz 14.9 Auch Cauchy-Schwarz}{62}{subsection.11.9.2}
+\contentsline {subsubsection}{\nonumberline Wann werden die Werte $ \pm $ angenommen}{63}{section*.16}
+\contentsline {subsection}{\numberline {11.9.3}Satz 14.10}{63}{subsection.11.9.3}
+\contentsline {section}{\numberline {11.10}Sch\IeC {\"a}tzer f\IeC {\"u}r $\mathds {E}$, Var, Cov}{64}{section.11.10}
+\contentsline {chapter}{\numberline {12}Geometrische Wkeiten}{65}{chapter.12}

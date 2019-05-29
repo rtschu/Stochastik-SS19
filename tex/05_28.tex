@@ -1,0 +1,105 @@
+\section{Satz 14.8}
+Var$\left[x+y\right] =$ Var x + Var y + 2 Cov(x,y)\smallskip\\
+Spezialfall: Sind x,y $\underbrace{\text{unkorreliert}}_{\cov(x,y) = 0}$ (z.B. unabhängig) \\$ \Rightarrow \var\left[x+y\right] = \var\: X + \var\:y $\medskip\\
+\textbf{Beweis}:\\
+Definition: x' = X-$\E$X, y'=y-$\E$y\medskip\\
+$\var\left[x+y\right]=\E\left[(x'+y')^2\right]=\E\left[x'^2+2x'y'+y'^2\right]\smallskip\\
+=\E\left[x'^2\right]+2\E\left[x'y'\right]+\E\left[y'^2\right] = \var\: x + 2 \cov(x,y)+\var\:y\qed$\medskip\\
+\textbf{Beispiel}: x = Größe einer Wohnung in m$^2$, y = Preis in Euro\\
+Cov(x,y) hat EInheiten $m^2-Eur$\smallskip\\
+Cov(ax+b, cy+d)=Cov(ax, cy) = $\E\left[axcy\right]-\E\left[ax\right]\E\left[cy\right] = $ ac Cov(x,y)
+\section{Dimensionsloses Maß für Zusammenhang zwischen zwei ZV x, y}
+\textbf{Definition}: Korrelationskoeff. von x und y ist:\\
+$\mathcal{P}(x,y) = \dfrac{\cov (x,y)}{\sqrt{\var \: x}\sqrt{\var \: y}}$ (x,y $\neq$ 0) \medskip\\
+\textbf{Bemerkung}: Wann ist Var x = 0?\smallskip\\
+$\E\left[\underbrace{(x-\E x)^2}_{\geq 0}\right] = 0, \qquad (x-\E x)^2=0$ mit Wkeit 1, x = $\E$x mit Wkeit 1\medskip\\
+\textbf{Bemerkung}: $\mathcal{P}(x,y)$ ist dimensionslos $\forall a,b,c,d \in \mathds{R}$\smallskip\\
+$\mathcal{P}(ax+b,xy+d) = \dfrac{\cov(ax+b,xy+d)}{\sqrt{\var(ax+b)}\sqrt{\var(cy+d)}}$\smallskip\\
+$=\dfrac{ac\cov(x,y)}{\sqrt{a^2\var\: x}\sqrt{c^2\var\: y}}=\mathcal{P}(x,y)$
+\subsection{Exkurs über die Cauchy-Schwarz-Ungleichung}
+\begin{tabbing}
+	Vektoren \= x = $(x_1,\dots,x_n)$ \hspace{1cm}\= Skalarprodukt = $<x,y> = \sum_{i=1}^{^n}x_iy_i$\\
+	\> y = $(y_1,\dots,y_n)$\> Längen von x und y:\\
+	\>\>$\vert x \vert \sqrt{<x,x>}=\sqrt{x_1^2 +\dots+x_n^2}$\\
+	\>\>$\vert y \vert \sqrt{y_1^2+\dots,y_n^2}$
+\end{tabbing}
+$<x,y> = \vert x \vert\: \vert y \vert * \cos \mathcal{P}$\medskip\\
+$\vert <x,y>\vert = |x|*|y|*\underbrace{|\cos \mathcal{P}}_{\leq 1}|x|\:|y|$\medskip\\
+\textbf{Cauchy-Schwarze-Ungleichung}
+$\vert \sum_{i=1}^nx_iy_i\vert \leq \sqrt{\sum_{i=1}^nx_i^2}\sqrt{\sum_{i=1}^ny_i^2}$
+\subsection{Satz 14.9 Auch Cauchy-Schwarz}
+Für zwei ZV x und y gilt $\vert \E\left[xy\right]\vert \leq \sqrt{\E\left[x^2\right]}\sqrt{\E\left[y^2\right]}$\medskip\\
+\textbf{Beweis}:\\
+$\forall u \in \mathds{R} \E\left[\underbrace{(ux+y)^2}_{\geq 0}\right]\geq 0$\smallskip\\
+$\E\left[u^2x^2+2uxy+y^2\right] \geq 0$\smallskip\\
+$\underbrace{u^2\E\left[x^2\right]+2u\E\left[xy\right]+\E\left[y^2\right]}_\text{quadratische Funktion von u} \geq 0 \quad \forall u \in \mathds{R}$\smallskip\\
+\imgHere{PARABEL CAUCHY-S}\smallskip\\
+D.h. $\mathcal{D} \leq 0 \Rightarrow (2\E\left[xy\right])^2-4\E\left[x^2\right]\E\left[y^2\right] \leq 0$\smallskip\\
+$(\E\left[xy\right])^2\leq \E\left[x^2\right]*\E\left[y^2\right]\qed$\medskip\\
+\textbf{Korollar}:\\
+$\vert \mathcal{P}(x,y) \vert \leq 1 \quad \text{Bew.:} \vert \mathcal{P}(x,y)\vert = \dfrac{\vert \cov(x,y)}{\sqrt{\var\:x}\sqrt{\var\:y}}=\dfrac{\vert \E\left[x'y'\right]\vert}{\sqrt{\E\left[x'^2\right]}\sqrt{\E\left[y'^2\right]}} \underbrace{\leq}_{\text{C-S-Ungl.}} 1$\medskip\\
+\textbf{Analogie}:\\
+\begin{tabular}{l|l}
+	Vektoren & ZV\\\hline
+	$x=(x_1,\dots,x_n)$ & x \\
+	$y=(y_1,\dots,y_n)$ & y\\
+	$<x,y> = \sum x_i y_i$&Cov(x,y) = $\E\left[x'y'\right]$\\
+	$|x|^2=<x,x>$&Cov(x,x) = Var x\\
+	0 Nullvektor & Konstante ZV (Var = 0)\\
+	x $\bot$ y, d.h. $<x,y> = 0$& Cov(x,y) = 0, d.h. x und y sind unkorreliert\\
+$|x+y|^2=|x|^2+|y|^2$, falls $x\bot$ y	& Var(x+y)=Var x + Var y, falls x,y unkorreliert.
+\end{tabular}
+\subsubsection{Wann werden die Werte $ \pm $ angenommen}
+$\vert \mathcal{P}(x,y)\vert \leq 1$\smallskip\\
+\textbf{Beispiel}: \begin{itemize}
+	\item $\mathcal{P}(x,x) =  \dfrac{\cov(x,x)}{\sqrt{\var \:x}\sqrt{\var \:x}}= 1$, Allgemeiner $\mathcal{P}(x,ax+b)=1 (a > 0)$
+	\item $\mathcal{P}(x,-x)=-1$ Allgemeiner: $\mathcal{P}(x,,ax+b)=-1 (a<0)$
+\end{itemize}
+\subsection{Satz 14.10}\begin{enumerate}
+	\item Aus $\mathcal{P}(x,y)=1 \Rightarrow \exists a >0, b\in \mathds{R} \text{ mit } y=ax+b$
+	\item Aus $\mathcal{P}(x,y)=-1 \Rightarrow\exists a<0,b\in \mathds{R}, \text{ mit } y = ax+b$
+\end{enumerate}
+\textbf{Beweis 1}:\\
+Sei $\mathcal{P}(x,y)=1$ Betrachte $Z=y-x*\dfrac{\sqrt{\var \: y}}{\sqrt{\var\: x}}$\smallskip\\
+Var Z = Var$\left[y-x \dfrac{\sqrt{\var\: y}}{\sqrt{\var\:x}}\right] =$ Var y + Var$\left[x\dfrac{\sqrt{\var\:y}}{\sqrt{\var\:x}}\right]-2\cov(y,x)*\dfrac{\sqrt{\var \:y}}{\sqrt{\var\:x}}$\smallskip\\
+= Var y + $\dfrac{\var \: x}{\var \:y}*\var \: x - 2 \mathcal{P}(x,y)\sqrt{\var\:x}\sqrt{\var \:y}*\dfrac{\sqrt{\var \:y}}{\sqrt{\var\:x}}$\smallskip\\
+$=2\var\:y-2*1*\var\: y = 0$\medskip\\
+Var Z = 0, also ist Z = const $\Rightarrow y-x \underbrace{\dfrac{\sqrt{\var\:y}}{\sqrt{\var\: x}}}_{a>0} = \underbrace{\text{const}}_b \qed$\medskip\\
+\textbf{Bemerkung}:\\
+Weitere Eigenschaften von Cov.
+\begin{itemize}
+	\item Cov(x,y) = Cov(y,x)
+	\item $\cov(x_1+x_2,y) = \cov(x_1,y)+\cov(x_2,y)$
+	\item Cov(ax,y)=aCov(x,y)
+\end{itemize}
+\section{Schätzer für $\E$, Var, Cov}
+Beobachten $\xn$ \text{(unabhängige ZV mit derselben Verteilung wie eine ZV x)}
+\begin{enumerate}
+	\item Schätze für $\mu = \E x \quad$ Schätzer für $\mu: \hat{\mu}=\dfrac{x_1+\dots+x_n}{n}$\\
+	$\hat{\mu}$ ist erwartungstreu, nämlich 
+	$$\E\hat{\mu}=\mu, \text{ denn } \E \hat{\mu} = \E \dfrac{x_1+\dots+x_n}{n}=\dfrac{1}{n}(\mu+\mu+\dots+\mu)=\mu$$
+	\item Schätzer $\sigma^2 = \var\: x$\smallskip\\
+	$\hat{\sigma}^2 = \dfrac{1}{n-1}\sum_{i=1}^n(x_i-\hat{\mu})^2$ (Bessel-Korr: n-1 statt n)\smallskip\\
+	$\E [\hat{\sigma}^2]=\sigma^2$ 
+	\item Seien $(x_1,y_1),(x_2,y_2),\dots,(x_n,y_n)$ n Paare von unabh. Beobachtungen\smallskip\\
+	Schätzer für $\mathcal{P}=\cov(x,y):$\\
+	$\hat{\mathcal{P}} = \dfrac{1}{n-1}\sum_{i=1}^n(x_i-\dfrac{x_1+\dots+x_n}{n}(y_i\dfrac{y_1+\dots+y_n}{n}))$\medskip\\
+\end{enumerate}
+\chapter{Geometrische Wkeiten}
+Disktrete WRäume: $\Omega = \{w_1,\dots,w_n\}$ oder $\Omega = \{w_1,w_2,\dots\}$\smallskip\\
+$\PP[\omega_i]=p_i$
+\begin{enumerate}
+	\item $p_i \geq 0 \forall i$
+	\item $\sum_{i=1}^{n,\infty}p_i = 1$
+\end{enumerate}
+\textbf{Nicht diskretes ZExp}:\\
+\imgHere{Glücksrad}\smallskip\\
+\textbf{Glücksrad}: Winkel $\varphi\in[0,2\pi)$\\
+Ausgang: $\dfrac{\varphi}{2\pi}\in[0,1), \quad \Omega =[0,1)$\medskip\\
+Für $\forall \omega \in [0,1) \quad \PP[\omega]=0, \PP[\Omega] = 1$\medskip\\
+\textbf{Definition}:\\
+\imgHere{Fläche}\smallskip\\
+Sei Q ein Gebiet. Zufälliger Punkt Z heißt uniform verteilt in Q, wenn $\forall A \subset Q:$\smallskip\\
+$\PP[Z \in A] = \dfrac{\lambda(A)}{\lambda(\Omega)}$\smallskip\\
+$\lambda$ = Volumen in dim 3, Fläche in dim 2, Länge in dim 1\\
+\imgHere{NichtUniform}
