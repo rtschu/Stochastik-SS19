@@ -1,86 +1,84 @@
 \section{Touren}
 \begin{enumerate}
 	\item 5 Städte aus 12 Städten für eine Rundreise auswählen.\\
-	\# Touren = ?\medskip\\
+	\# Touren = ?
 	\begin{tabbing}
-	\textbf{Lösung:} \=12 Möglichkeiten für Startpunkt\\
-	\> 11 Möglichkeiten für die nächste Stadt usw.
-		\end{tabbing}
+		\textbf{Lösung:} \=12 Möglichkeiten für Startpunkt\\
+		\> 11 Möglichkeiten für die nächste Stadt usw.
+	\end{tabbing}
 	\textbf{Insgesamt}: $12*11*10*9*8$ Möglichkeiten
 	\item 12 Personen, Ausschuss aus 5 Personen, darunter 1 Vorsitzender\\
 	\# Möglichkeiten = ?\medskip\\
 	\textbf{Lösung 1:} $\underbrace{\binom{12}{5}}_\text{Vositzenden auswählen} * \:5$\medskip\\
 	\textbf{Lösung 2:} $\underbrace{12}_\text{Vorsitzender} *\: \binom{11}{4}$
 \end{enumerate}
+\newpage
 \section{Allgemeine hypergeometrische Verteilung}
-Teich mit n Fischen\\
-r mögl. Farben\\
+Teich mit n Fischen und r möglichen Farben:\medskip\\
 $n_1$ Fische haben Farbe 1, \hspace{1cm} $n_1 + n_2 +...+n_3 = n$\\
-...\
+...\\
 $n_r$ Fische haben Farbe r\medskip\\
 Fischer fängt K Fische\\
- A = ''genau $k_1$ Fische mit Farbe 1 gefangen, genau $k_2 Fische $ ..., genau $k_r$ Fische ....''\\
- $k_1 + ... + k_r = k$\smallskip\\
- $\mathds{P}[A] = ?$\newpage
- \textbf{Lösung:} $\Omega = \{ T \subset \{1,...,n\}:\#T=k\} \qquad \#\Omega = \binom{n}{k}$\\
- $\#A = \binom{n_1}{k_1} * \binom{n_2}{k_2}*...*\binom{n_r}{k_r}$\medskip\\
- $k_1$ Fische mit Farbe 1 auswählen: $\binom{n_1}{k_1}$\\
- $k_r$ Fische mit Farbe r auswählen: $\binom{n_r}{k_r}$\medskip\\
- $\mathds{P}[A] = \underbrace{\dfrac{\binom{n_1}{k_1}*...*\binom{n_r}{k_r}}{\binom{n}{k0}}}_\text{Allgemeine hypergeometrische Verteilung}$\medskip\\
- \textbf{Beispiel}: 52 Karten\\
- Zufällig auf 2 Spieler verteilt. Jeder Spieler bekommt 26 Karten\medskip\\
- A = ''Spieler 1 bekommt genau 3 Asse, 2 Könige und 1 Dame''\\
- $\mathds{P}[A] = ?$\medskip\\
- \textbf{Lösung:} $\#\Omega = \binom{52}{26} * \underbrace{\binom{26}{26}}_{=1}$\medskip\\
- $\#A=\underbrace{\binom{4}{3}}_\text{3 A aus 4}*\underbrace{\binom{4}{2}}_\text{2 K aus 4}*\underbrace{\binom{4}{1}}_\text{1 D aus 4}*\underbrace{\binom{40}{20}}_{\substack{\text{aus 40 verbl.}\\\text{ Karten 20 auswählen}}}$\medskip\\
- \textbf{Beispiel:} Zug mit 10 Waggons, jeweils 50 Plätze.\\
- 30 Personen suchen sich zufällig Plätze aus\smallskip\\
- A = ''in jedem Waggon genau 3 Personen''\medskip\\
- \textbf{Lösung:} $\#\Omega = \binom{500}{30}$ [30 Plätze ausgewählt, die besetzt werden sollen]\medskip\\
- $\#A = \underbrace{\binom{50}{3}*\binom{50}{3}*...*\binom{50}{3}}_10 = \binom{50}{3}^{10}$\smallskip\\
- $\mathds{P}[A] = \dfrac{\binom{50}{3}^{10}}{\binom{500}{30}}$
- \section{Multinomialkoeff.}
- 	\textbf{Beispiel}: k verschiedene Gegenstände sollen auf r Fächer verteilt werden, s.d.:\\
- 	Im 1. Fach $k_1$ Gegenstände landen, \hspace{1cm} $k_1 +k_2+ ... + k_r = k$\\
- 	Im 2. Fach $k_2$ Gegenstände landen,\\...\\
- 	Im r. Fach $k_r$ Gegenstände landen\smallskip\\\# Möglichkeiten = ?\newpage
- 	\textbf{Lösung:}\\
- 	 Wähle $k_1$ Gegenstände für Fach 1: $\binom{k}{k_1}$\smallskip\\
- 	Wähle $k_2$ Gegenstände für Fach 2: $\binom{k-k_1}{k_2}$\smallskip\\
- 	Wähle $k_3$ Gegenstände für Fach 3: $\binom{k-k_1-k_2}{k_3}$\\
- 	...\\
- 	Wähle $k_r$ Gegenstände für Fach r: $\binom{k-k_1-k_2-...-k_{r-1}}{k_r} = \binom{k_r}{k_r} = 1$\medskip\\
- 	Insgesamt: $\binom{k}{k_1}*\binom{k-k_1}{k_2}*\binom{k-k_1-k_2}{k_3}*...*\binom{k-k_1-k_2-...-k_{r-1}}{k_r} = \\\dfrac{k!}{k_1!*k_2!*...*k_r!}$\medskip\\
- 	$k! = 1 * 2 * ... * k$\\
- 	$1! = 1$\\
- 	$0! = ! \qquad \binom{n}{n} = \dfrac{n!}{n!*0!}=\dfrac{1}{0!}=1$
- 	\subsubsection{Definition: Multinomialkoeff.}
- 	$\binom{k}{k_1,k_2,...,k_r} = \dfrac{k!}{k_1!*k_2!*...*k_r!}$\medskip\\
- 	Spezifalfall: r = 2\\
- 	$\binom{k}{k_1,k-k_1}=\dfrac{k!}{k_1!(k-k_1)!} = \binom{k}{k_1}= \binom{k}{k-k_1}$\medskip\\
- 	\textbf{Multinomialformel: } $$\underbrace{(x+y+z+t)^n = (x+y+z+t)*(x+y+z+t)*...*(x+y+z+t)}_\text{n Mal}$$ 
- 	 $$=\Sigma x^{k_1}y^{k_2}z^{k_3}t^{k_4} \qquad k_1, k_2, k_3, k_4 \in \{0,1,...\}, k_1 + ... k_4 = n$$\medskip\\
- 	 \textbf{Beispiel:} Aus 33 Schülern sollen 3 Fußballmannschaften gebildet werden.\\
- 	 \#Mögl = ?\medskip\\
- 	 \textbf{Lösung}: $\binom{33}{11,11,11}= \dfrac{33!}{11!11!11!}$ [falls Mannschaften unterscheidbar]\medskip\\
- 	 Wenn Mannschaften \textbf{nicht} unterscheidbar sind:\\
- 	 $\binom{33}{11,11,11}/3!$\bigskip\\
- 	 \textbf{Beispiel:} Wie viele 16-stellige Zahlen kann man mit einem Ziffernvorrat von \textbf{3 Einsen}, \textbf{5 Dreien} und \textbf{8 Sechsen} schreiben? \medskip\\
- 	 1,1,1,3,3,3,3,3,6,6,6,6,6,6,6,6\medskip\\
- 	 \textbf{Lösung:} 16 Stellen \qedsymbol \qedsymbol \qedsymbol ... \qedsymbol\\
- 	 3 Stellen auswählen, die mit Einsen besetzt werden. $\binom{16}{3}$\\
- 	 Es verbleiben 13 Stellen. 5 Stellen auswählen, die mit Dreien besetzt werden $\binom{13}{5}$\\
- 	 Es verbleiben 8 Stellen. Es bleibt nur eine Möglichkeit für die 8 Sechsen.\medskip\\
- 	 \textbf{Insgesamt:} $\binom{16}{3}*\binom{13}{5}*1 = \binom{16}{3,5, 8} = \dfrac{16!}{3!5!8!}$\smallskip\\
- 	 Fächer: 1,3,6\\
- 	 Gegenstände: Stellen
- 	 \subsection{Multinomialverteilung mit Zurücklegen}
- 	 \textbf{Bsp.:} Fische mit $n = \underbrace{n_1}_\text{Farbe 1}+,..,n_r$\\
- 	 Fischer fängt k Fische \textbf{mit Zurücklegen}\\
+A = ''genau $k_1$ Fische mit Farbe 1 gefangen, ... , genau $k_r$ Fische mit Farbe r gefangen'' mit $k_1 + ... + k_r = k$\medskip\\
+$\mathds{P}[A] = ?$\medskip\\
+\textbf{Lösung:} $\Omega = \{ T \subset \{1,...,n\}:\#T=k\} \qquad \#\Omega = \binom{n}{k}$\medskip\\
+$\#A = \binom{n_1}{k_1} * \binom{n_2}{k_2}*...*\binom{n_r}{k_r}$\medskip\\
+$k_1$ Fische mit Farbe 1 auswählen: $\binom{n_1}{k_1}$\\
+$k_r$ Fische mit Farbe r auswählen: $\binom{n_r}{k_r}$\medskip\\
+$\mathds{P}[A] = \underbrace{\dfrac{\binom{n_1}{k_1}*...*\binom{n_r}{k_r}}{\binom{n}{k0}}}_\text{Allgemeine hypergeometrische Verteilung}$\medskip\\
+\textbf{Beispiel}: 52 Karten\\
+Zufällig auf 2 Spieler verteilt. Jeder Spieler bekommt 26 Karten.\medskip\\
+A = ''Spieler 1 bekommt genau 3 Asse, 2 Könige und 1 Dame'\smallskip'\\
+$\mathds{P}[A] = ?$\medskip\\
+\textbf{Lösung:} $\#\Omega = \binom{52}{26} * \underbrace{\binom{26}{26}}_{=1}$\medskip\\
+$\#A=\underbrace{\binom{4}{3}}_\text{3 A aus 4}*\underbrace{\binom{4}{2}}_\text{2 K aus 4}*\underbrace{\binom{4}{1}}_\text{1 D aus 4}*\underbrace{\binom{40}{20}}_{\substack{\text{aus 40 verbl.}\\\text{ Karten 20 auswählen}}}$\medskip\\
+\textbf{Beispiel:} Zug mit 10 Waggons, jeweils 50 Plätze.\\
+30 Personen suchen sich zufällig Plätze aus\smallskip\\
+A = ''in jedem Waggon genau 3 Personen''\medskip\\
+\textbf{Lösung:} $\#\Omega = \binom{500}{30}$ [30 Plätze ausgewählt, die besetzt werden sollen]\medskip\\
+$\#A = \underbrace{\binom{50}{3}*\binom{50}{3}*...*\binom{50}{3}}_10 = \binom{50}{3}^{10}$\smallskip\\
+$\mathds{P}[A] = \dfrac{\binom{50}{3}^{10}}{\binom{500}{30}}$
+\section{Multinomialkoeffizient}
+\textbf{Beispiel}: k verschiedene Gegenstände sollen auf r Fächer verteilt werden, s.d.:\\
+Im 1. Fach $k_1$ Gegenstände landen, \hspace{1cm} $k_1 +k_2+ ... + k_r = k$\\
+Im 2. Fach $k_2$ Gegenstände landen,\\...\\
+Im r. Fach $k_r$ Gegenstände landen\smallskip\\\# Möglichkeiten = ?\medskip\\
+\textbf{Lösung:}\\
+Wähle $k_1$ Gegenstände für Fach 1: $\binom{k}{k_1}$\smallskip\\
+Wähle $k_2$ Gegenstände für Fach 2: $\binom{k-k_1}{k_2}$\smallskip\\
+Wähle $k_3$ Gegenstände für Fach 3: $\binom{k-k_1-k_2}{k_3}$\\
+...\\
+Wähle $k_r$ Gegenstände für Fach r: $\binom{k-k_1-k_2-...-k_{r-1}}{k_r} = \binom{k_r}{k_r} = 1$\medskip\\
+Insgesamt: $\binom{k}{k_1}*\binom{k-k_1}{k_2}*\binom{k-k_1-k_2}{k_3}*...*\binom{k-k_1-k_2-...-k_{r-1}}{k_r} = \\\dfrac{k!}{k_1!*k_2!*...*k_r!}$\medskip\\
+$k! = 1 * 2 * ... * k$\\
+$1! = 1$\\
+$0! = ! \qquad \binom{n}{n} = \dfrac{n!}{n!*0!}=\dfrac{1}{0!}=1$
+\subsubsection{Definition: Multinomialkoeffizient}
+$\binom{k}{k_1,k_2,...,k_r} := \dfrac{k!}{k_1!*k_2!*...*k_r!}$\medskip\\
+Spezifalfall: r = 2:\medskip\\
+$\binom{k}{k_1,k-k_1}=\dfrac{k!}{k_1!(k-k_1)!} = \binom{k}{k_1}= \binom{k}{k-k_1}$\\\\
+\textbf{Multinomialformel: } $$\underbrace{(x+y+z+t)^n = (x+y+z+t)*(x+y+z+t)*...*(x+y+z+t)}_\text{n Mal}$$ 
+$$=\Sigma x^{k_1}y^{k_2}z^{k_3}t^{k_4} \qquad k_1, k_2, k_3, k_4 \in \{0,1,...\}, k_1 + ... k_4 = n$$\medskip\\
+\textbf{Beispiel:} Aus 33 Schülern sollen 3 Fußballmannschaften gebildet werden.\\
+\#Mögl = ?\medskip\\
+\textbf{Lösung}: $\binom{33}{11,11,11}= \dfrac{33!}{11!11!11!}$ [falls Mannschaften unterscheidbar]\medskip\\
+Wenn Mannschaften \textbf{nicht} unterscheidbar sind: $\binom{33}{11,11,11}/3!$\bigskip\\
+\textbf{Beispiel:} Wie viele 16-stellige Zahlen kann man mit einem Ziffernvorrat von \textbf{3 Einsen}, \textbf{5 Dreien} und \textbf{8 Sechsen} schreiben? \medskip\\
+1,1,1,3,3,3,3,3,6,6,6,6,6,6,6,6\medskip\\
+\textbf{Lösung:} 16 Stellen \qedsymbol \qedsymbol \qedsymbol ... \qedsymbol\\
+3 Stellen auswählen, die mit Einsen besetzt werden. $\binom{16}{3}$\\
+Es verbleiben 13 Stellen. 5 Stellen auswählen, die mit Dreien besetzt werden $\binom{13}{5}$\\
+Es verbleiben 8 Stellen. Es bleibt nur eine Möglichkeit für die 8 Sechsen.\medskip\\
+\textbf{Insgesamt:} $\binom{16}{3}*\binom{13}{5}*1 = \binom{16}{3,5, 8} = \dfrac{16!}{3!5!8!}$\smallskip\\
+Fächer: 1,3,6\\
+Gegenstände: Stellen
+\subsection{Multinomialverteilung mit Zurücklegen}
+\textbf{Beispiel:} Fische mit $n = \underbrace{n_1}_\text{Farbe 1}+,..,n_r$\medskip\\
+Fischer fängt k Fische \textbf{mit Zurücklegen}
 \begin{tabbing}
-	 	 A=''\= genau $k_1$ Fische mit Farbe 1 gefangen,\\
-	 	 \> ...\\
-	 	 \> genau $k_r$ Fische mit Farbe r
+	A = ''\= genau $k_1$ Fische mit Farbe 1 gefangen,\\
+	\> ...\\
+	\> genau $k_r$ Fische mit Farbe r''
 \end{tabbing}
 $\mathds{P}[A] = ?$\medskip\\
 \textbf{Lösung:} $\Omega = \{1,...,n\}^k \qquad \#\Omega = n^k$\\
@@ -92,17 +90,16 @@ Betrachte Ereignis:
 A besteht aus $\binom{k}{k_1,...,k_r}$ ''Kopien'' von B, somit
 $$\#A = \binom{k}{k_1,...,k_r}*n_1^{k_r}*...*n_r^{k_r}$$
 \begin{tabbing}
-	B =\= '' bei Ziehungen $1,...,k_n$ Farbe 1 gezogen,\\
+	B = \= ''bei Ziehungen $1,...,k_n$ Farbe 1 gezogen,\\
 	\> bei Ziehungen $k_1+1,...,k_1+k_2$: Farbe 2,\\
 	\>...\\
 	\> bei Ziehungen $k_1+...+k_r+1,...,k$ : Farbe r''
 \end{tabbing}
 $\#B=\underbrace{n_1*...*n_1}_{k_1}*\underbrace{n_2*...*n_2}_{k_2}*...*\underbrace{n_r*...*n_r}_{k_r} = n_1^{k_1}*...*n_r^{k_r}$\medskip\\
-$\mathds{P}[A] = \dfrac{\#A}{\#\Omega}= \binom{k}{k_1,...,k_r}*\left(\dfrac{n_1}{n}\right)^{k_1}*\left(\dfrac{n_2}{n}\right)^{k_2}*...*\left(\dfrac{n_r}{n}\right)^{k_r}$\qed\medskip\\
-\textbf{Beispiel:} Eine faire Münze wird n mal geworfen.\\ $\mathds{P}[\text{k Mal ''Kopf''}]= \dfrac{\binom{n}{k}}{2^n}$, dann: 
-$$\#\Omega = \{Z, K\}^n\quad \#\Omega = 2^n\quad \#A=\binom{n}{k} \quad \substack{\text{[Auswahl von k Würfen,}\\\text{ in denen Kopf geworfen wurde]}}$$\newpage
+$\mathds{P}[A] = \dfrac{\#A}{\#\Omega}= \binom{k}{k_1,...,k_r}*\left(\dfrac{n_1}{n}\right)^{k_1}*\left(\dfrac{n_2}{n}\right)^{k_2}*...*\left(\dfrac{n_r}{n}\right)^{k_r}$\qed\\\\
+\textbf{Beispiel:} Eine faire Münze wird n mal geworfen.\medskip\\ $\mathds{P}[\text{k Mal ''Kopf''}]= \dfrac{\binom{n}{k}}{2^n}$, dann: 
+$$\#\Omega = \{Z, K\}^n\quad \#\Omega = 2^n\quad \#A=\binom{n}{k} \quad \substack{\text{[Auswahl von k Würfen,}\\\text{ in denen Kopf geworfen wurde]}}$$\\
 \textbf{Zwei Aufgaben}:
 \begin{enumerate}
 	\item Rundreise. Kunde darf 5 aus 12 verschiedenen Städten auswählen.\\Anzahl der Touren: 12*11*10*9*8, nicht $\binom{12}{5}$ [Tour geordnet]
 	\item 12 Personen. Es soll ein Ausschuss aus 5 Personen gebildet werden, davon 1 Vorsitzender. Anzahl der Mögl: $\binom{12}{5}*5$, oder $12*\binom{11}{4}$\end{enumerate}
- 	 

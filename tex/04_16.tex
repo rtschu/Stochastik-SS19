@@ -1,11 +1,11 @@
-\chapter{Axiome der WTheorie}
-$\Omega$ = Menge aller Ausgänge eines Zufallsexp.\\
-Ereignisse = Teilmengen von $\Omega \quad A \subset \Omega$\\
-$\mathcal{P}(\Omega)$ = Menge aller Ereignisse = Potenzmenge von $\Omega \quad \#\mathcal{P}(\Omega)=2^{\#\Omega}$\\
-Wahrscheinlichkeit ist eine Fkt. $\mathds{P}:\mathcal{P}(\Omega) \rightarrow [0,1] \\ A \rightarrow \mathds{P}[A] $ mit 
+\chapter{Axiome der Wahrscheinlichkeitstheorie}
+$\Omega$ = Menge aller Ausgänge eines Zufallsexperiments\medskip\\
+Ereignisse := Teilmengen von $\Omega$\medskip\\
+$\mathcal{P}(\Omega)$ = Menge aller Ereignisse = Potenzmenge von $\Omega$\\ $\#\mathcal{P}(\Omega)=2^{\#\Omega}$\medskip\\
+Wahrscheinlichkeit ist eine Funktion $\mathds{P}:\mathcal{P}(\Omega) \rightarrow [0,1], A \mapsto \mathds{P}[A] $ mit 
 \begin{itemize}
-	\item $\mathbf{A_1} \mathds{P}[A_1\cup A_2\cup...]=\mathds{P}[A_1]+\mathds{P}[A_2]+...$\\
-	$\forall A_1, A_2,... \subset \Omega $mit $A_i \cap A_j = \emptyset$\\$\forall i \neq j$
+	\item $\mathds{P}[A_1\cup A_2\cup...]=\mathds{P}[A_1]+\mathds{P}[A_2]+...$\\
+	$\forall A_1, A_2,... \subset \Omega $ mit $A_i \cap A_j = \emptyset$ $\forall i \neq j$
 	\item $\mathds{P}[\Omega]=1$
 \end{itemize}
 \section{Eigenschaften von $\mathds{P}$}
@@ -21,8 +21,8 @@ Wahrscheinlichkeit ist eine Fkt. $\mathds{P}:\mathcal{P}(\Omega) \rightarrow [0,
 	$\mathds{P}[A\cup B] = \mathds{P}[A] + \mathds{P}[B] - \mathds{P}[A\cap B]$
 	\item Siebformel oder Einschluss-Ausschluss-Formel.\\
 	\end{enumerate}
-
-	\textbf{Für 3 Ereignisse A, B, C} $\subset \Omega \quad \mathds{P}[A\cup B \cup C]=
+\newpage
+	\textbf{Für 3 Ereignisse A, B, C} $\subset \Omega$\\ $\mathds{P}[A\cup B \cup C]=
 	\\\mathds{P}[A]+\mathds{P}[B]+\mathds{P}[C]-\mathds{P}[A\cap B] - \mathds{P}[B \cap C]-\mathds{P}[C\cap A] + \mathds{P}[A\cap B \cap C]$\medskip\\
 	\includegraphics[width=0.8\textwidth]{img/sieb.PNG}\medskip\\
 	\textbf{Für 4 Ereignisse A,B,C,D}\\
@@ -32,12 +32,13 @@ Wahrscheinlichkeit ist eine Fkt. $\mathds{P}:\mathcal{P}(\Omega) \rightarrow [0,
 	$-\mathds{P}[A\cap B \cap C \cap D]$\medskip\\
 	\textbf{Für n Ereignisse} $A_1,A_2,...,A_n$:\\
 	$\mathds{P}[\bigcup^n_{k=1}A_k]=\Sigma^n_{i=1}\mathds{P}[A_i]-\Sigma_{1\leq i < j \leq n}\mathds{P}[A_i\cap A_j]+\Sigma_{1\leq i < j<k\leq n} \mathds{P}[A_i\cap A_j\cap A_k]- ... $\smallskip\\
-	$+ (-1)^{n+1}\mathds{P}[A_1\cap ... \cap A_n]$\medskip\\
-	\textbf{Bsp.:}\\
-n Briefe werden zufällig in n adressierte Briefumschläge gesteckt.\\
-A=''mind. 1 Brief wird in den richtigen Umschlag gesteckt''\\
+	$+ (-1)^{n+1}\mathds{P}[A_1\cap ... \cap A_n]$\\\\
+	\textbf{Beispiel:}\\
+n Briefe werden zufällig in n adressierte Briefumschläge gesteckt.\medskip\\
+Ereignis A = ''mind. 1 Brief wird in den richtigen Umschlag gesteckt''\medskip\\
 $\mathds{P}[A] = ?$\medskip\\
-\textbf{Lösung.:} \hspace{3cm} Briefe 1,2,3,4,5,6\\
+\textbf{Lösung:}\\
+Briefe 1,2,3,4,5,6\medskip\\
 $\Omega = \{\underbrace{(a_1,...,a_i)}_{\substack{a_i\text{ gibt an, in welchen}\\\text{ Umschlag Brief i gesteckt wird}}}: a_i \in \{1,...,n\} a_i \neq a_j \forall i \neq j \}$\medskip\\
 \#$\Omega = n*(n-1)*...+1=n! \quad \#A = ?$\\
 A = \{$(a_1,...,a_n)\in \Omega: \exists k \text{ mit } A_k = k$\}\medskip\\
