@@ -70,4 +70,7 @@
 \contentsline {subsubsection}{\nonumberline Wann werden die Werte $ \pm $ angenommen}{63}{section*.16}
 \contentsline {subsection}{\numberline {11.9.3}Satz 14.10}{63}{subsection.11.9.3}
 \contentsline {section}{\numberline {11.10}Sch\IeC {\"a}tzer f\IeC {\"u}r $\mathds {E}$, Var, Cov}{64}{section.11.10}
-\contentsline {chapter}{\numberline {12}Geometrische Wkeiten}{65}{chapter.12}
+\contentsline {chapter}{\numberline {12}Geometrische Wahrscheinlichkeiten}{65}{chapter.12}
+\contentsline {subsubsection}{\nonumberline Beispiel}{65}{section*.17}
+\contentsline {subsubsection}{\nonumberline Beispiel: Buffon'sches Nadelproblem}{66}{section*.18}
+\contentsline {subsubsection}{\nonumberline Beispiel: Betrand'sches Paradoxon}{68}{section*.19}

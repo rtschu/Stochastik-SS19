@@ -1,0 +1,103 @@
+\chapter{Geometrische Wahrscheinlichkeiten}
+Disktrete Wahrscheinlichkeitsräume: $\Omega = \{w_1,\dots,w_n\}$ oder $\Omega = \{w_1,w_2,\dots\}$\smallskip\\
+$\PP[\omega_i]=p_i$
+\begin{enumerate}
+	\item $p_i \geq 0 \forall i$
+	\item $\sum_{i=1}^{n,\infty}p_i = 1$
+\end{enumerate}
+\textbf{Nicht diskretes ZExp}:\\
+\imgHere{Glücksrad}\smallskip\\
+\textbf{Glücksrad}: Winkel $\varphi\in[0,2\pi)$\\
+Ausgang: $\dfrac{\varphi}{2\pi}\in[0,1), \quad \Omega =[0,1)$\medskip\\
+Für $\forall \omega \in [0,1) \quad \PP[\omega]=0, \PP[\Omega] = 1$\medskip\\
+\textbf{Definition}:\\
+\imgHere{Fläche}\smallskip\\
+Sei Q ein Gebiet. Zufälliger Punkt Z heißt uniform verteilt in Q, wenn $\forall A \subset Q:$\smallskip\\
+$\PP[Z \in A] = \dfrac{\lambda(A)}{\lambda(\Omega)}$\smallskip\\
+$\lambda$ = Volumen in dim 3, Fläche in dim 2, Länge in dim 1\\
+\imgHere{NichtUniform}\medskip\\
+\subsubsection{Beispiel} Zwei Freunde wollen sich zwischen 10 und 11 Uhr treffen. Jeder kommt $\underbrace{\text{rein zufällig}}_\text{uniform}$ zwischen 10 und 11 Uhr an.\smallskip\\
+Jeder wartet 20 Minuten und geht anschließend.\medskip\\
+A=''Freunde treffen sich''\hspace{1cm}$\PP[A]=?$\smallskip\\
+\imgHere{Timeline}\smallskip\\
+Sie treffen sich, falls $\vert x-y\vert < \frac{1}{3}$ (20 Minuten = $\frac{1}{3}$ Stunde)\medskip\\
+\textbf{Lösung}:\\
+Ankunftszeit des 1. Freundes: 10+x\hspace{1cm}$0\leq x\leq 1$\\
+Ankunftszeit des 2. Freundes: 10+y\hspace{1cm}$0\leq y\leq 1$\medskip\\
+$\Omega = \{(x,y):o\leq x \leq 1, 0\leq y \leq 1\} = [0,1]^2$\medskip\\
+\begin{math}
+\PP[B] = \dfrac{\lambda(B)}{\lambda(\Omega)}=\lambda(B),\: \forall B \subset [0,1]^2\medskip\\
+A = \{(x,y):\vert x -y \vert < \frac{1}{3}\}\smallskip\\
+\text{\imgHere{Graph x-y}}\smallskip\\
+\PP[A]=\lambda(A)=1-\lambda(A^C)
+=1-\underbrace{2}_\text{2 Dreiecke}*\dfrac{1}{2}*\dfrac{2}{3}*\dfrac{2}{3}=1-\dfrac{4}{9}-\dfrac{5}{9}
+\end{math}\medskip\\
+\subsubsection{Beispiel: Buffon'sches Nadelproblem}
+Liniertes Paper mit unendlich vielen parallelen Geraden mit Abstand 1.\smallskip\\
+Man lässt eine Nadel der Länge l $<$ 1 auf das Papier fallen.\medskip\\
+A=''Nadel kreuzt eine Gerade''\smallskip\\
+$\PP[A] = \frac{2}{\pi}l$\smallskip\\
+\textbf{Bemerkung}:\\
+Methode zur Berechnung von $\pi$: Man lässt N (sehr viele) Nadeln fallen\\
+Sei k die Anzahl der Nadeln, welche eine Linie kreuzen.\medskip\\
+GGZ: $\dfrac{k}{N} \approx \dfrac{2}{\pi}l, \quad \pi \approx \dfrac{2Nl}{k}$\smallskip\\
+\textbf{Beweis}:\\
+\begin{tabular}{ll}
+	\imgHere{ nadeln phi} & y uniform verteilt auf $[0,1]$\\
+	& $\varphi$ uniform verteilt auf $[-\frac{\pi}{2},+\frac{\pi}{2}]$
+\end{tabular}\smallskip\\
+$\Omega = [0,1] \times [-\frac{\pi}{2},+\frac{\pi}{2}] = \{(y,\varphi):0\leq y \leq 1, -\frac{\pi}{2}\leq \varphi \leq + \frac{\pi}{2}\}$\smallskip\\
+$\PP[B] = \dfrac{\lambda(B)}{\lambda(\Omega)}=\dfrac{\lambda(B)}{\pi},\: \forall B \subset \Omega$\smallskip\\
+\imgHere{$ \pi $ / 2 graph }\smallskip\\
+Nadel kreuzt die untere Gerade $\Leftrightarrow$ \imgHere{Schnitt}$\Leftrightarrow \frac{l}{2}>s=\frac{y}{\cos \varphi} \Leftrightarrow\frac{l}{2}\cos \varphi > y$\medskip\\
+Nadel kreuzt die obere Gerade $\Leftrightarrow \frac{l}{2}>\frac{1-y}{\cos \varphi} \Leftrightarrow \frac{l}{2}\cos \varphi > 1-y$\medskip\\
+$\lambda(A)=2*\lambda(A_1)=2 \displaystyle\int_{-\frac{\pi}{2}}^{\frac{\pi}{2}}\dfrac{l}{2}\cos \varphi d \varphi = l \displaystyle\int_{-\frac{\pi}{2}}^{\frac{\pi}{2}} \cos \varphi d \varphi = l \sin \varphi \big|_{-\frac{\pi}{2}}^{\frac{\pi}{2}}$\medskip\\
+$\PP[A] = \dfrac{\lambda(A)}{\pi} = \dfrac{2l}{\pi}$ \qed\medskip\\
+\textbf{Lösung 2}:\\
+Für eine Nadel der Länge l $>$ 0 (l $>$ 1 ist möglich) sei f(l) die erwartete Anzahl der Kreuzungen\smallskip\\
+\begin{tabular}{ll}
+Falls l $<$ 1:& Die Anzahl der Kreuzungen ist 0 oder 1 (Bernoulli-ZV)\\
+& Wahrscheinlichkeit, dass eine Gerade gekreuzt wird, ist f(l)\\
+\end{tabular}
+Eigenschaft von f(l):\smallskip\\
+\imgHere{f(x+y)} 
+f(x+y) = f(x)  f(y) $\forall x,y > 0$\hspace{1cm} (1)\smallskip\\
+Außerdem ist f monoton steigend.\hspace{5.05cm} (2)\medskip\\
+\textbf{Behauptung}: Aus (1) und (2) folgt, dass f(x)= ax$\quad a \in \mathds{R}$\medskip\\
+Beweis:
+\begin{align*}
+x=y=1\qquad & f(2)=f(1)+f(1)\\
+&f(2)=2f(1)\smallskip\\
+x=2,y=1\qquad & f(3) = f(2)+f(1) = 3f(1)
+\end{align*}
+Analog: $f(4)=4f(1),\dots,f(n)=nf(1) \quad f(1) \overset{\text{def}}{=} a \quad f(n) = n*a$\medskip\\
+Betrachte rationale Zahl $\frac{n}{m},\: n.m \in \mathds{N}$\smallskip\\
+$\underbrace{f\left(\frac{n}{m}\right)+f\left(\frac{n}{m}\right)+\dots+f\left(\frac{n}{m}\right)}_m = f(n)$\medskip\\
+$mf(\frac{n}{m}) = f(n)$\\
+$f(\frac{n}{m})=\frac{f(n)}{m}=\frac{nf(1)}{m}=\frac{n}{m}\underbrace{f(1)}_a$\medskip\\
+D.h. $\forall$ rationale Zahlen q $>$ 0: $\quad f(q) = qf(1)$\medskip\\
+Sei x $>$ 0 eine irrationale Zahl.  $\exists$ rationale Zahlen $q_1<q_2<\dots \quad p_1 >p_2>\dots$ \\mit $q_n \uparrow x$ und $p_n \downarrow x$\medskip\\
+$f(p_n) = p_nf(1), f(q_n)=q_nf(1)$ (oben gezeigt).
+\medskip\\
+Falls f$\uparrow: q_n < x < p_n$\smallskip\\
+$f\uparrow: f(q_n)\leq f(x)\leq f(p_n)$\smallskip\\
+$q_nf(1)\leq f(x) \leq p_nf(1) \forall n$\medskip\\
+$n \rightarrow\infty: x f(1) \leq f(x) \leq x f(1)$\smallskip\\
+$f(x) = xf(1) \forall x > 0$ \qed\bigskip\\
+\textbf{Fortsetzung Buffon-Problem}: f(l) = al\\
+Betrachte polygonale Nadeln: \imgHere{polygonale}\smallskip\\
+Erwartete Anzahl der Kreuzungen ist: 
+$$f(l_1)+f(l_2)+\dots+f(l_n) = al_1+\dots+al_=n  a(l_1+\dots+l_n)$$
+Krumme Nadel der Länge l: \imgHere{KrummeNadel}\medskip\\
+Erwartete Anzahl der Kreuzungen: $a_l$\medskip\\
+a ist immer noch unbekannt\medskip\\
+Betrachte Kreis mit Radius $\frac{1}{2}$.\\ Es gibt immer 2 Kreuzungen $\rightarrow al = 2$\smallskip\\
+$l=2\pi*\frac{1}{2}=\pi$\medskip\\
+$a=\frac{2}{\pi}$\medskip\\
+Für eine Nadel der Länge l: $\frac{2}{pi}l$ Kreuzungen (im Erwartungswert) \qed
+\subsubsection{Beispiel: Betrand'sches Paradoxon}
+Kreis mit Radius 1. Wähle zufällige Sehne. L sei die Länge der Sehne \\
+$\PP[L>\dfrac{\sqrt{3}}{2}]$\smallskip\\
+\imgHere{Dreicke}\smallskip\\
+
+

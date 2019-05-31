@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.5.12)  29 MAY 2019 13:45
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.5.12)  31 MAY 2019 11:58
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2685,48 +2685,100 @@ Underfull \hbox (badness 10000) in paragraph at lines 84--87
 
  []
 
+) (./tex/05_31.tex
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 88.
+(babel)             in language  on input line 1.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 88.
+(babel)             in language  on input line 1.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 88.
+(babel)             in language  on input line 1.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 88.
-[64]
+(babel)             in language  on input line 1.
+ [64]
 chapter 12.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 88.
+(babel)             in language  on input line 1.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 88.
-)
+(babel)             in language  on input line 1.
+
+Underfull \hbox (badness 10000) in paragraph at lines 8--19
+
+ []
+
+
+Overfull \hbox (17.28018pt too wide) in paragraph at lines 19--35
+\OT1/cmr/m/n/12 Zwei Freun-de wol-len sich zwi-schen 10 und 11 Uhr tref-fen. Je
+-der kommt $[]$
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 19--35
+
+ []
+
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 126.
+(babel)             in language  on input line 35.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 126.
+(babel)             in language  on input line 35.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 126.
+(babel)             in language  on input line 35.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 126.
- [65
+(babel)             in language  on input line 35.
+[65
 
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 126.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 126.
+Overfull \hbox (3.6881pt too wide) in paragraph at lines 36--68
+[] \OT1/cmr/m/n/12 Ei-
+ []
+
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 68.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 68.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 68.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 68.
+[66]
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 98.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 98.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 98.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 98.
+ [67]
+Underfull \hbox (badness 10000) in paragraph at lines 99--102
+
+ []
+
+)
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 127.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 127.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 127.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 127.
+ [68]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 127.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 127.
  (./Mitschrift Stochastik.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 126.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 126.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 127.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 127.
 Package rerunfilecheck Info: File `"Mitschrift Stochastik".out' has not changed
 .
-(rerunfilecheck)             Checksum: A731BA8F909CC9B2DB9BF1EDA189B042;4125.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 126.
+(rerunfilecheck)             Checksum: 0162435FCBDE41A2F0EDC437F96394CD;4138.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 127.
  ) 
 Here is how much of TeX's memory you used:
- 23095 strings out of 492982
- 436056 string characters out of 6134896
- 614592 words of memory out of 5000000
- 25976 multiletter control sequences out of 15000+600000
+ 23107 strings out of 492982
+ 436204 string characters out of 6134896
+ 615592 words of memory out of 5000000
+ 25979 multiletter control sequences out of 15000+600000
  16698 words of font info for 70 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  64i,14n,66p,8879b,533s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -2749,10 +2801,10 @@ f-dist/fonts/type1/public/doublestroke/dsrom12.pfb></usr/share/texlive/texmf-di
 st/fonts/type1/public/doublestroke/dsrom8.pfb></usr/share/texlive/texmf-dist/fo
 nts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texlive/texmf-dist/fon
 ts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on "Mitschrift Stochastik.pdf" (65 pages, 1972873 bytes).
+Output written on "Mitschrift Stochastik.pdf" (68 pages, 1983588 bytes).
 PDF statistics:
- 807 PDF objects out of 1000 (max. 8388607)
- 671 compressed objects within 7 object streams
- 185 named destinations out of 1000 (max. 500000)
+ 824 PDF objects out of 1000 (max. 8388607)
+ 685 compressed objects within 7 object streams
+ 191 named destinations out of 1000 (max. 500000)
  590 words of extra memory for PDF output out of 10000 (max. 10000000)
 
