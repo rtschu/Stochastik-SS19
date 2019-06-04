@@ -1,0 +1,116 @@
+\chapter{Stetige ZV: Verteilungsfunktion und Dichte}
+\textbf{Definition}: Sei X eine ZV. Die Verteilungsfunktion von x ist 
+$$F(t) = F_x(t)\overset{\text{def}}{=} \PP [x \leq t],\: t\in \mathds{R}$$
+\textbf{Beispiel}: Sei x uniform verteilt auf \{1,\dots,6\}\hspace{1cm}$F_x(t)=?$\smallskip\\
+\imgHere{Verteilungsfunktion}\smallskip\\
+$F_x(1)=\PP[x\leq 1]=\PP[x=1] = \frac{1}{6}$\smallskip\\
+$F_x(1,6) = \PP[x\leq 1,6] = \PP [x=1] = \frac{1}{6}$\smallskip\\
+$F_x(2)= \PP[x\leq 2] = \PP[x=2] = \frac{2}{6}$\smallskip\\
+\dots\medskip\\
+Verteilungsfunktion: $F_x(t) = \begin{cases}
+0, &\text{falls t }\leq 1\\
+\frac{1}{6}, & \text{falls t }\in [1,2)\\
+\frac{2}{6}, & \text{falls t }\in [2,3)\\
+\vdots\\
+\frac{5}{6}, & \text{falls } t \in [5,6)\\
+1,& \text{falls }t \geq 6
+\end{cases}$\medskip\\
+Sei allgemeiner x eine diskrete ZV mit Werten $x_1 < x_2 < \dots$ und Wkeiten $p_i = \PP [x = x_i]$\smallskip\\
+\imgHere{diskreteVerteilung}\smallskip\\
+\textbf{Definition}: $[$vereinfacht$]$ ZV x heißt stetig, wenn Verteilungsfunktion stetig ist, d.h. $\forall t \in \mathds{R}:\PP[x=t]=0$\medskip\\
+\textbf{Beispiel}: Sei x uniform verteilt auf $[0,1]$, D.h. $\forall B \subset [0,1] \quad \PP[x \in B] = \dfrac{\lambda(B)}{1}$ Verteilungsfunktion auf x?\medskip\\
+\textbf{Lösung}: $\PP[x\leq t] = ?$\\
+\textbf{Fall 1}: $t < 0 \Rightarrow \PP [x \leq t ] = 0$\smallskip\\
+\textbf{Fall 2}: $t > 1 \Rightarrow \PP [x \leq t] = 1$\smallskip\\
+\textbf{Fall 3}:Sei t $\in  [0,1]: \quad \PP[x\leq t] = \PP\left[x \in \left[0,t\right] \right] = t$\medskip\\
+Also: \\
+$F_x(t) \begin{cases}
+0, & \text{wenn t }  \leq 0\\
+t, & \text{wenn t }\in [0,1] \\
+1, & \text{wenn t } \geq 1
+\end{cases}$\medskip\\
+\textbf{Beispiel}:\\
+Sei Z uniform verteilt auf dem Kreis $\Omega = \{(x,y): x^2+y^2 \leq 1\}$\\
+Sei R der Abstand von Z zum Mittelpunkt. \imgHere{Kreis mit Punkt in der Mitte}\\
+Verteilungsfunktion von R\smallskip\\
+\textbf{Lösung}: R nimmt Werte zwischen 0 und 1 an.\smallskip\\
+Grundmenge $\Omega = \{(x,y): x^2+y^2\leq 1\}$\smallskip\\
+$\PP: \quad \PP [B] = \dfrac{\lambda(B)}{\lambda(\Omega)} = \dfrac{\lambda(B)}{\pi}$\medskip\\
+ZV: $X(\underbrace{x,y}_{\in \Omega}) = x \qquad y(\underbrace{x,y}_{\in \Omega}) = y \qquad R(x,y) = \sqrt{x^2+y^2}$\medskip\\
+$F_R(t) = \PP[R\leq t]$\smallskip\\
+Fall 1: $t<0 \Rightarrow F_R(t) = 0$\smallskip\\
+Fall 2: $t>1 \Rightarrow F_R(t) = 1$\smallskip\\
+Fall 3: $t \in [0,1] \Rightarrow \PP [R \leq t] = \dfrac{\pi t^2}{\pi}= t^2$\smallskip\\\imgHere{Kreis 2}\smallskip\\
+\section{Dichte einer ZV}
+Erzeuge unabhängige N Realisierungen einer ZV X. N ist sehr groß \medskip\\
+Für jede Realisierung lege ein Sandkörnchen mit Masse $ \frac{1}{N} $ auf die x-Achse\smallskip\\ Höhe des Haufens ist die Dichte von X\smallskip\\
+\imgHere{Sandkörner}\smallskip\\
+\textbf{Eigenschaften der Dichte}
+\begin{enumerate}
+	\item $f(t) \geq 0$
+	\item $\displaystyle \int_{-\infty}^{\infty}f(t) dt=1$
+\end{enumerate}
+\textbf{Definition}: ZV X hat Dichte f, falls 
+$$\forall a < b : \PP[a<X<b] = \int_{a}^{b}f(t) dt$$
+\textbf{Wichtige Bemerkung}: $\forall u \in \mathds{R}:\PP[x = u] = 0$\smallskip\\
+f/t) ist nicht $\PP [x=t]$\smallskip\\
+$\PP [t < x < t+ \underbrace{dt}_{\approx 0}]= \int_{t}^{t+dt}f(s)ds \underbrace{\approx}_{dt \approx 0} f(t)*dt$\smallskip\\
+$f(t) = \underset{dt \rightarrow 0}{\text{lim}}  \dfrac{\PP[t<x<t+dt]}{dt}$\medskip\\
+\imgHere{Dichte}\medskip\\
+ZV X hat Dichte f, falls $\forall a < b \PP[a < X < b] = \int_{a}^{b} f(t)dt$
+$$f(t) = \underset{dt \rightarrow 0}{\text{lim}} \dfrac{\PP [t< X < t+dt]}{dt}$$
+\subsection{Zusammenhang zwischen Dichte und Verteilungsfunktion}
+$F(t) = \PP[x\leq t]=\PP[-\infty \leq x \leq t] = \displaystyle\int_{-\infty}^t f (s) ds$\medskip\\
+$\mathbf{F(t) = \displaystyle \int_{-\infty}^t f(s) ds} \quad \mathbf{f(t) = F'(t)}$\medskip\\
+\textbf{Beispiel}: Sei X uniform verteilt auf dem $[0,1] $\\
+ Bestimme Dichte von X und $X^2$\medskip\\
+\textbf{Lösung}: $f_x(t)=F'_x(t) \qquad F_x(t) = \begin{cases}
+0, & t \leq 1\\t, & t \in [0,1]\\
+1, &t \geq 1
+\end{cases}$\medskip\\
+$f_x(t) = \begin{cases}
+0,&t \leq 0\\
+1,&t \in (0,1)\\
+0,&t >1
+\end{cases}$\medskip\\
+$f_x(1), f_x(0)$ nicht definiert
+\imgHere{Grafiken Fx und fx}\medskip\\
+$f_{x^2}(t) = F'_{x^2}(t)$ \smallskip\\
+\imgHere{realisierungen}\smallskip\\
+Zuerst bestimme $F_{x^2}(t) = \PP [x^2 \leq t]$\smallskip\\
+Fall 1: $t < 0 \Rightarrow F_{x^2}(t) = 0$\smallskip\\
+Fall 2: $t > 1 \Rightarrow F_{x^2}(t) = 1$\smallskip\\
+Fall 3: $t \in [0,1] \Rightarrow F_{x^2}(t) = \PP [x^2\leq t] \underset{\substack{x \geq 0\\t \geq 0}}{=} \PP [x \leq \underbrace{\sqrt{t}}_{\in [0,1]}] = \underset{\text{x uniform}}{\sqrt{t}}$\medskip\\
+Dichte von $X^2$:\medskip\\
+$f_{x^2} = F'_{x^2}(t) = \begin{cases}
+0, & t<0\\
+\sqrt{t}'=\frac{1}{2\sqrt{t}}, & t \in (0,1)\\
+0, &t >1
+\end{cases}$\smallskip\\
+\imgHere{Graphen}
+\medskip\\
+\textbf{Beispiel}: Sei x und y zwei unabhängige auf $[0,1]$ uniform verteilte Zufallszahlen\\
+Verteilungsfunktion und Dichte von Z = x+y?\medskip\\
+\textbf{Bemerkung}: Werte von Z liegen zwischen 0 und 2\medskip\\
+\textbf{Lösung}: Modell: $\Omega = \{(x,y): 0 \leq x \leq 1\}$ \\\imgHere{Einheitsquadrat}
+$$\PP:\quad \PP[B] = \dfrac{\lambda(B)}{1}\quad \forall B \subset \Omega$$
+ZV Z(x,y) = x+y\smallskip\\
+Zuerst bestimmen wir die Verteilung $F_Z(t) = \PP[Z \leq t]$\medskip\\
+Fall 1: $t<0 \Rightarrow F_Z(t)=0$\smallskip\\
+Fall 2: $t>2 \Rightarrow F_Z(t) = 1$\smallskip\\
+Fall 3: $t \in [0,2] \quad \{Z \leq t\} = \{(x,y) \in \Omega: \: x+y \leq t \}$\smallskip\\
+Fall 3a: $t \in [0,1] \Rightarrow \{Z \leq t\} \text{ ist Dreieck}:$\\
+\imgHere{Dreieck}\\
+$F_Z(t) = \PP[Z \leq t] = \dfrac{t^2}{2}$\smallskip\\
+Fall 3b: $t \in [1,2] \Rightarrow \{z \leq t\}$ ist Komplement eines Dreiecks\\
+ \imgHere{dreieckKomplement}\smallskip\\
+ $F_Z(t) = \PP [Z \leq t] = 1-\dfrac{(2-t)^2}{2}$
+ \medskip\\
+\textbf{ Dichte von Z:}\\
+ $f_Z(t)=F_Z'(t) = \begin{cases}
+ 0, & t<0\\
+ t, &t \in (0,1)\\
+ 2-t,&t \in (1,2)\\
+ 0,&t>2
+ \end{cases}$\smallskip\\\imgHere{dichte}\medskip\\
+ \textbf{Bemerkung}: $\displaystyle \int_{-\infty}^{\infty} f_Z(t) dt = \displaystyle \int_{0}^{Z}f_Z(t)dt = 1$
